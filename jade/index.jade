@@ -1,11 +1,42 @@
 include ../node_modules/bemto.jade/bemto
+//
+  <?php
+
+  $utm_medium = '-';
+  $utm_source = '-';
+  $utm_campaign = '-';
+  $utm_term = '-';
+  $utm_content = '-';
+
+  if (isset($_GET['utm_medium'])) {
+    $utm_medium = $_GET['utm_medium'];
+  }
+
+  if (isset($_GET['utm_source'])) {
+    $utm_source = $_GET['utm_source'];
+  }
+
+  if (isset($_GET['utm_campaign'])) {
+    $utm_campaign = $_GET['utm_campaign'];
+  }
+
+  if (isset($_GET['utm_term'])) {
+    $utm_term = $_GET['utm_term'];
+  }
+
+  if (isset($_GET['utm_content'])) {
+    $utm_content = $_GET['utm_content'];
+  }
+  $url = $_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+  $utm =  $_SERVER["QUERY_STRING"];
+  ?>
 
 <!DOCTYPE html>
 html(lang="ru")
 head
   meta(charset="UTF-8")
   meta(name="viewport" content="width=device-width, initial-scale=1")
-  title ВОДОПРОВОД И КАНАЛИЗАЦИЯ «ПОД КЛЮЧ»
+  title Газоснабжение «под ключ»
 
   link(rel="icon" href="img/favicon.ico" type="image/x-icon")
   link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
@@ -46,46 +77,59 @@ body.page
   .header
     .container
       .offer 
-        .offer__text.start-animate <span>Водопровод и канализация «под ключ» </span><br> в Ростове-на-Дону и Ростовской области
+        .offer__text.start-animate
+          |Почему у 98,3% людей возникают<br>трудности с <span>газификацией дома,</span> <br>а наши клиенты <span>не знают проблем?</span>
+          .offer__items 
+            .offer__item  Газифицируем частные дома «Под Ключ»
+            .offer__item Минимальные сроки работ 
+            .offer__item Подстроимся под Вас и Ваше расписание
         .offer__action.order.start-animate(style="animation-delay: .2s") Получить бесплатную консультацию
 
   .froze
     .container
       .froze__container
-        .froze__action ЗАПИШИТЕСЬ НА БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ СПЕЦИАЛИСТА ПО ОФОРМЛЕНИЮ ДОКУМЕНТОВ
+        .froze__action Оставьте заявку на бесплатную консультацию специалиста по газификации
         .froze__description Заполните форму, и специалист свяжется с Вами в течение 20 минут
         +b.form
           form.ajax
             input(placeholder='Введите Ваше имя' name='name').input.input_type_name
             input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
+            input(type='hidden', name='url', value='<?echo $url?>')
+            input(type='hidden', name='utm', value='<?echo $utm?>')
+            input(type='hidden', name='utm_term', value='<?echo $utm_term?>')
+            input(type='hidden', name='utm_campaign', value='<?echo $utm_campaign?>')
+            input(type='hidden', name='utm_source', value='<?echo $utm_source?>')
+            input(type='hidden', name='utm_medium', value='<?echo $utm_medium?>')
+            input(type='hidden', name='utm_content', value='<?echo $utm_content?>')
+            input(type='hidden', name='order', value='ВК под ключ. Консультация по документам')
             input(type="hidden" name="order" value="ВК под ключ. Консультация по документам")
-            input(type='submit' value='Получить консультацию по документам').form__btn
+            input(type='submit' value='Получить консультацию').form__btn
 
 
   .triggers
     .container
       .row
-        +b.col._lg_4._md_4._sm_4._xs_6
+        +b.col._lg_3._md_3._sm_3._xs_6
           .triggers__items.start-animate
             img(src='img/triggers__img1.png').triggers__img
             .triggers__text Опыт работы<br>более 6 лет
-        +b.col._lg_4._md_4._sm_4._xs_6
-          .triggers__items(style="animation-delay: .2s").start-animate
-            img(src='img/triggers__img2.png').triggers__img
-            .triggers__text Гарантия 24 месяца<br>на монтажные работы
-        +b.col._lg_4._md_4._sm_4._xs_6
+        //- +b.col._lg_4._md_4._sm_4._xs_6
+        //-   .triggers__items(style="animation-delay: .2s").start-animate
+        //-     img(src='img/triggers__img2.png').triggers__img
+        //-     .triggers__text Гарантия 24 месяца<br>на монтажные работы
+        +b.col._lg_3._md_3._sm_3._xs_6
           .triggers__items(style="animation-delay: .3s").start-animate
             img(src='img/triggers__img3.png').triggers__img
             .triggers__text Подключение<br>за 3 месяца
-        +b.col._lg_4._md_4._sm_4._xs_6
-          .triggers__items(style="animation-delay: .4s").start-animate
-            img(src='img/triggers__img4.png').triggers__img
-            .triggers__text Гарантия получения<br>лицевого счета
-        +b.col._lg_4._md_4._sm_4._xs_6
+        //- +b.col._lg_4._md_4._sm_4._xs_6
+        //-   .triggers__items(style="animation-delay: .4s").start-animate
+        //-     img(src='img/triggers__img4.png').triggers__img
+        //-     .triggers__text Гарантия получения<br>лицевого счета
+        +b.col._lg_3._md_3._sm_3._xs_6
           .triggers__items(style="animation-delay: .5s").start-animate
             img(src='img/triggers__img5.png').triggers__img
             .triggers__text Применяем<br>сертифицированные<br>материалы
-        +b.col._lg_4._md_4._sm_4._xs_6
+        +b.col._lg_3._md_3._sm_3._xs_6
           .triggers__items(style="animation-delay: .6s").start-animate
             img(src='img/triggers__img6.png').triggers__img
             .triggers__text Цены ниже<br>среднерыночных<br> на 7-12%
@@ -100,141 +144,56 @@ body.page
           |Сбор пакета документов
           +e.arrow
         +e.text
-          ol
-            li  Правоустанавливающие документы
-            li
-              | Топографическая съемка в масштабе 1:500 с указанием всем коммуникаций (наземных и подземных)
-            li  Баланс водопотребления и водоотведения подключаемого объекта
-            li  Ситуационный план
-          //-+b.progress-bar(data-interest="10")
-            +e.pace
-              +e.interest 
+          p На первом этапе необходимо сформировать следующий пакет документов:
+          ul
+            li Расчет максимального потребления газа;
+            li Ситуационный план;
+            li Правоустанавливающие документы;
+          p И сдать в АО «Газпромгазораспределение».
 
       +e.item
         +e.title
           +e.number 2
-          |Получение технических условий
+          |Получение ТУ или договор на технологическое присоединение
           +e.arrow
         +e.text
-          p Регламентированный срок получения технических условий и/или договора на подключение:
-          ol
-            li  Технические условия – 14 рабочих дней
-            li  Договор на подключение – 20 рабочих дней
-          p Технические условия являются бесплатными и выдаются при следующих условиях:
-          ul
-            li Абонент уже имеет лицевой счет (подабонента, колонки и т.п.);
-            li
-              | В исключительных случаях, когда водоканал не имеет возможности предоставить ближайшую точку подключения, но есть возможность подключиться с условием строительства магистральной сети за счет заказчика.
+          p Договор на технологическое присоединение является платным.
           p
-            | Договор на подключение оплачивается в кассу Водоканала и рассчитывается, исходя из максимальной нагрузки водопотребления (водоотведения)
-          p Цена:
-          ul
-            li Водоснабжение — 39 882 руб./куб.м. в сутки без НДС
-            li Водоотведение — 59 166 руб за куб.м в сутки без НДС
-          p Например (частный дом водоснабжение):
-          p 0,84 * 39882 = 33500 (без НДС) + 18% = 39531 руб
-          //-+b.progress-bar(data-interest="24")
-            +e.pace
-              +e.interest 
+            | Его стоимость зависит от максимальной нагрузки газопотребления на вашем объекте, а также приближенности точки подключения. Регламентированный срок выдачи ТУ с момента подачи заявки 14 дней.
+
 
       +e.item
         +e.title
           +e.number 3
-          |Проектирование и согласование
+          |Проектирование и согласование 
           +e.arrow
         +e.text
-          p Процесс проектирования включает в себя:
-          ul
-            li Обследование объекта инженером-проектировщиком
-            li
-              | Создание полного пакета чертежей стадии РД (общие данные, план сетей, профиль, таблица колодцев, спецификация)
-            li
-              | Согласования со всеми эксплуатирующими инстанциями города, а также администрацией, департаментом автодорог, департаментом окружающей среды и департаментом архитектуры. Таким образом согласования с более 15 организациями.
-          //-+b.progress-bar(data-interest="24")
-            +e.pace
-              +e.interest 
+          p В процессе проектирования инженер-проектировщик выезжает на место и обследует объект. На месте вы решаете все вопросы по поводу прокладки трубопровода, места установки оборудования, устройства вентиляционных каналов и дымохода. Затем выезжают геодезисты, выполняют топографическую сьемку и заверяют в департаменте Архитектуры. ЗПосле чего проектировщик формирует проектную документацию и согласовывает ее с АО «Газпромгазораспределение». Вся процедура занимает от 3 недель.
+
 
       +e.item
         +e.title
           +e.number 4
-          |Разрешение на разрытия
+          |Строительно-монтажные работы 
           +e.arrow
          +e.text
-          p
-            | Для того, чтобы осуществлять строительство необходимо получить разрешение от двух инстанций:
-          ul
-            li ГИБДД – согласовать схему дорожного движения
-            li
-             | Управление благоустройством администрации города – получение ордера на разрытие (по закрытии которого мы получаем справку о благоустройстве, как неотъемлемый документ при сдачи сети в Водоканал)
-          //-+b.progress-bar(data-interest="58")
-            +e.pace
-              +e.interest 
+          p СМР осуществляются в пределах 3 рабочих дней. Их точная стоимость рассчитывается на основании проекта и обследования объекта инженером. В последующем газопровод сдается экспертам Горгаза, а также представителям Ростехнадзора. Безопасность дымоходов подкрепляется актом ВДПО.
 
       +e.item
         +e.title
           +e.number 5
-          |Строительно-монтажные работы
+          |Ввод газового трубопровода в эксплуатацию
           +e.arrow
         +e.text
-          p
-            | Прокладка сети осуществляется открытым или закрытым (методом ГНБ, прокола) способом.
-          p Комплексные строительно-монтажные работы включают в себя:
-          ul
-            li Строительство колодца (при необходимости)
-            li
-              | Обвязка колодца (врезка, установка запорной арматуры, переподключение трубопровода)
-            li
-              | Прокладка трубопровода от точки врезки к дому (объекту капитального строительства)
-            li Ввод трубопровода в дом (объект капитального строительства)
-          //-+b.progress-bar(data-interest="75")
-            +e.pace
-              +e.interest 
+          p Для того, чтобы осуществить поставку газа, необходимо пройти ряд процедур. Заключить комплексный договор, получить акт приемки, пройти инструктаж, предоставить копии паспортов на газовые приборы и оборудование, получить акт ВДПО, акт о пригодности СИКЗ, САКЗ, ИФС (при наличии).
 
       +e.item
         +e.title
           +e.number 6
-          |Сдача сетей в Водоканал
+          |Получение лицевого счета
           +e.arrow
         +e.text
-          p
-            | Результатом данного процесса является подписание актов со стороны Водоканала и опломбирование счетчика
-          p Для этого необходимо сдать пакет документов, включающий в себя:
-          ul
-            li
-              | Исполнительную топографическую съемку (согласованную с департаментом архитектуры)
-            li Справку о благоустройстве
-            li Акты гидравлических испытаний
-            li Освидетельствования скрытых работ
-            li Проект сетей
-            li Акт дезинфекции и промывки сетей и внутридомовой системы
-            li Протокол лабораторных исследований
-            li Копия паспорта водомера (вода)
-          p
-            | После чего инспектор Водоканала выезжает на объект, проверяет качество, сопоставляет с проектом и пломбирует счетчик и выдает акт.
-          //-+b.progress-bar(data-interest="86")
-            +e.pace
-              +e.interest 
-
-      +e.item
-        +e.title
-          +e.number 7
-          |Получение лицевого счета 
-          +e.arrow
-        +e.text
-          p
-            | После приемки инспектором сетей, необходимо подать следующий пакет документов:
-          ul
-            li Разрешение совладельцев (при необходимости).
-            li Правоустанавливающие документы на землю и дом
-            li Документ-основания права (договор купли продажи, договор дарения и т.д.)
-            li Технический паспорт на дом
-            li Паспорт водомера
-            li Разрешение совладельцев (при наличии таковых)
-          p(style="padding-top: 14px; line-height: 1.5em;")
-            b Результатом всего цикла работ является  — ваше комфортное пользование коммуникациями и получение квитанций от водоканала на оплату!
-          //-+b.progress-bar(data-interest="100")
-            +e.pace
-              +e.interest 
+          p Заключить договор на поставку газа.
 
   .docs
     .container
@@ -245,20 +204,14 @@ body.page
         +b.col_lg_7
           .docs__title Документы, изготавливаемые ООО «БК Инвент»
           ol.docs__list
-            li Баланс водопотребления и водоотведения
-            li Топографическая съемка (заверенная департаментом архитектуры и радостроительства г.Ростова-на-Дону)
-            li Ситуационный план
-            li Проект наружной сети, согласованный со всеми инстанциями
-            li Схема организации дорожного движения с ГИБДД
-            li Ордер на плановое (аварийное) разрытие
-            li Акт на чистоту траншеи
-            li Акт освидетельствования гидравлических испытаний
-            li Акт освидетельствования скрытых работ
-            li Акт дезинфекции и промывки
-            li Протокол лабораторных исследований воды
-            li Справка о благоустройстве территории
-            li Исполнительная топографическая съемка (заверенная департаментом архитектуры и  градостроительства г.Ростова-на-Дону)
-            li Паспорт водомера
+            li СРО (лицензия)
+            li Договор на технологическое присоединение
+            li Технические условия
+            li Рабочая проектная документация
+            li Акт о приемке сети
+            li Акт ВДПО
+            li Комплексный договор
+            li Договор на поставку газа
         +b.col_lg_5
           +b.wall._docs
             //- +e.title Получить перечень необходимых документов для предоставления ООО «БК Инвент»
@@ -273,6 +226,14 @@ body.page
                 input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
                 input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
                 input(type="hidden" name="download" value="...")
+                input(type='hidden', name='url', value='<?echo $url?>')
+                input(type='hidden', name='utm', value='<?echo $utm?>')
+                input(type='hidden', name='utm_term', value='<?echo $utm_term?>')
+                input(type='hidden', name='utm_campaign', value='<?echo $utm_campaign?>')
+                input(type='hidden', name='utm_source', value='<?echo $utm_source?>')
+                input(type='hidden', name='utm_medium', value='<?echo $utm_medium?>')
+                input(type='hidden', name='utm_content', value='<?echo $utm_content?>')
+                input(type='hidden', name='order', value='ВК под ключ. Консультация по документам')
                 input(type="hidden" name="order" value="ВК под ключ")
                 input(type='submit' value='Получить список документов').form__btn
     //-+b.btn_style_blue Оставить заявку на консультацию инженера
@@ -311,21 +272,7 @@ body.page
         +b.zoom(data-img="case10.jpg")
           img(src="img/case10_mini.jpg")
           +e.icon
-        +b.zoom(data-img="case11.jpg")
-          img(src="img/case11_mini.jpg")
-          +e.icon
-        +b.zoom(data-img="case12.jpg")
-          img(src="img/case12_mini.jpg")
-          +e.icon
-        +b.zoom(data-img="case13.jpg")
-          img(src="img/case13_mini.jpg")
-          +e.icon
-        +b.zoom(data-img="case14.jpg")
-          img(src="img/case14_mini.jpg")
-          +e.icon
-        +b.zoom(data-img="case15.jpg")
-          img(src="img/case15_mini.jpg")
-          +e.icon 
+
       //-   +b.col._xs_12._md_10._md-offset_1
       //-     .slider
       //-       .reviews__gallery
@@ -413,14 +360,22 @@ body.page
   .froze
     .container
       .froze__container
-        .froze__action ЗАПИШИТЕСЬ НА БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ СПЕЦИАЛИСТА ПО ОФОРМЛЕНИЮ ДОКУМЕНТОВ
+        .froze__action Оставьте заявку на бесплатную консультацию специалиста по газификации
         .froze__description Заполните форму, и специалист свяжется с Вами в течение 20 минут
         +b.form
           form.ajax
             input(placeholder='Введите Ваше имя' name='name').input.input_type_name
             input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
+            input(type='hidden', name='url', value='<?echo $url?>')
+            input(type='hidden', name='utm', value='<?echo $utm?>')
+            input(type='hidden', name='utm_term', value='<?echo $utm_term?>')
+            input(type='hidden', name='utm_campaign', value='<?echo $utm_campaign?>')
+            input(type='hidden', name='utm_source', value='<?echo $utm_source?>')
+            input(type='hidden', name='utm_medium', value='<?echo $utm_medium?>')
+            input(type='hidden', name='utm_content', value='<?echo $utm_content?>')
+            input(type='hidden', name='order', value='ВК под ключ. Консультация по документам')
             input(type="hidden" name="order" value="ВК под ключ. Консультация по документам")
-            input(type='submit' value='Получить консультацию по документам').form__btn
+            input(type='submit' value='Получить консультацию').form__btn
 
   .container
     +b.title
@@ -455,7 +410,7 @@ body.page
         +b.col._lg_3
           .scheme__item.scheme__item_step_6(style="animation-delay: 2.5s").start-animate
             .scheme__title Получение лицевого счета
-            .scheme__text Гарантируем, что вы получите лицевой счет на водоснабжение и канализацию
+            .scheme__text Гарантируем, что вы получите лицевой счет на газ
 
     .scheme.scheme_mod_1
       .row
@@ -484,8 +439,7 @@ body.page
         +b.col._sm_6
           .scheme__item.scheme__item_step_6
             .scheme__title Получение лицевого счета
-            .scheme__text Гарантируем, что вы получите лицевой счет на водоснабжение и канализацию
-
+            .scheme__text Гарантируем, что вы получите лицевой счет на газ
   .questions
     .questions__title У вас остались вопросы?
     | Задайте их нашему специалисту!
@@ -514,6 +468,14 @@ body.page
               form.ajax
                 input(placeholder='Введите Ваше имя' name='name').input.input_type_name
                 input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
+                input(type='hidden', name='url', value='<?echo $url?>')
+                input(type='hidden', name='utm', value='<?echo $utm?>')
+                input(type='hidden', name='utm_term', value='<?echo $utm_term?>')
+                input(type='hidden', name='utm_campaign', value='<?echo $utm_campaign?>')
+                input(type='hidden', name='utm_source', value='<?echo $utm_source?>')
+                input(type='hidden', name='utm_medium', value='<?echo $utm_medium?>')
+                input(type='hidden', name='utm_content', value='<?echo $utm_content?>')
+                input(type='hidden', name='order', value='ВК под ключ. Консультация по документам')
                 input(type="hidden" name="order" value="ВК под ключ. Заказ звонка")
                 input(type='submit' value='Заказать звонок').form__btn
 
@@ -527,6 +489,14 @@ body.page
                 input(placeholder='Введите Ваше имя' name='name').input.input_type_name
                 input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
                 input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
+                input(type='hidden', name='url', value='<?echo $url?>')
+                input(type='hidden', name='utm', value='<?echo $utm?>')
+                input(type='hidden', name='utm_term', value='<?echo $utm_term?>')
+                input(type='hidden', name='utm_campaign', value='<?echo $utm_campaign?>')
+                input(type='hidden', name='utm_source', value='<?echo $utm_source?>')
+                input(type='hidden', name='utm_medium', value='<?echo $utm_medium?>')
+                input(type='hidden', name='utm_content', value='<?echo $utm_content?>')
+                input(type='hidden', name='order', value='ВК под ключ. Консультация по документам')
                 input(type="hidden" name="order" value="ВК под ключ. Консультация")
                 input(type='submit' value='Отправить').form__btn
 
@@ -541,7 +511,7 @@ body.page
         .modal__dialog
             .close.modal__close
             .modal__title Документы можно скачать по ссылке
-            a(href="http://lp.bk-invent.ru/docs.pdf" target="_blank").btn Скачать
+            a(href="http://lp.bk-invent.ru/docs2.pdf" target="_blank").btn Скачать
 
   .modal.modal_type_zoom#modal__zoom
     .modal__wrapper
@@ -558,16 +528,16 @@ body.page
   script(src="tmp/index.js")
   //endbuild
   script(type='text/javascript').
-      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-      ym(51499229, "init", {
-      id:51499229,
-      clickmap:true,
-      trackLinks:true,
-      accurateTrackBounce:true,
-      webvisor:true
-      });
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(51570953, "init", {
+    id:51570953,
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true,
+    webvisor:true
+    });
   noscript
     div
-      img(src='https://mc.yandex.ru/watch/51499229', style='position:absolute; left:-9999px;', alt='')
+      img(src='https://mc.yandex.ru/watch/51570953', style='position:absolute; left:-9999px;', alt='')

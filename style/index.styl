@@ -163,6 +163,7 @@
     position absolute
     width 100%
     height 80px
+    box-shadow  0px 0px 10px 0px rgba(46, 43, 43, 0.63)
 
 .logo
     &__img
@@ -235,7 +236,7 @@
     box-shadow inset 0px 2px 18px 0px rgba(46, 43, 43, 0.63)
     
     background-color #ddd
-    background-image  linear-gradient(135deg, rgba(84,114,210,.4) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(70, 70, 70, 0.6)), url('../img/header-img.png'), url('../img/header-bg.jpg')
+    background-image  linear-gradient(110deg, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 78%, rgba(255, 255, 255, 0.5) 78%), linear-gradient(135deg, rgba(255,255,255,0.6278886554621849) 35%, rgba(255,255,255,0) 53%), url('../img/header-img.png'), url('../img/header-bg.jpg')
     // background-position top right 10px, bottom left
     background-repeat no-repeat, no-repeat, repeat, no-repeat
     background-size auto, auto, auto, cover
@@ -251,33 +252,48 @@
 .offer
     text-align left !important
     position relative
-    &__text
-        &:after
-            content " "
-            position absolute
-            width 40%
-            height 5px
-            background #fff
-            margin-top 27px
-            @media (min-width 1000px)
-                display block
-            display none
-            margin-top 25px
-            box-shadow 0px 0px 5px rgba(7, 7, 7, 0.7)
+    &__items
         @media (min-width 1000px)
-            margin-bottom 100px
-            font-size 40px
-        margin-bottom 50px
-        font-size 20px
-        color #fff
-        line-height 1.55
-        text-shadow 0px 0px 10px rgba(7, 7, 7, 0.7)
+            margin-top 40px
+        margin-top 20px
+    &__item
+        background url('../img/ok.png') no-repeat center left
+        @media (min-width 1000px)
+            font-size 20px
+            line-height 1.4em
+            background-size 20px 
+            padding-left 30px
+        padding-left 20px
+        background-size 14px 
+        font-size 14px
+        line-height 1.2em
+        margin-bottom 10px
+        font-weight normal
+    &__text
+        // &:after
+        //     content " "
+        //     position absolute
+        //     width 40%
+        //     height 5px
+        //     background #fff
+        //     margin-top 27px
+        //     @media (min-width 1000px)
+        //         display block
+        //     display none
+        //     margin-top 25px
+        //     box-shadow 0px 0px 5px rgba(7, 7, 7, 0.7)
+        @media (min-width 1000px)
+            //margin-bottom 100px
+            font-size 45px
+        margin-bottom 80px
+        font-weight 500
+        font-size 19px
+        color #000
+        line-height 1.4
+        //-shadow 0px 0px 10px rgba(7, 7, 7, 0.7)
         width 100%
         span
-            text-transform uppercase
-            @media (min-width 1000px)
-                font-size 45px
-            font-size 25px
+            color #e93935
     &__action
         @media (min-width 1000px)
             font-size 18px
@@ -296,13 +312,24 @@
         background-size 30px, auto
         cursor pointer
         transition all .1s linear
-        box-shadow  0px 2px 18px 0px rgba(171, 7, 46, 0.42)
+        //box-shadow  0px 2px 18px 0px rgba(171, 7, 46, 0.42)
         position relative
         padding-right 50px
         user-select none
-        top 0 
+        top 0
+        &:before
+            @media (min-width 1000px)
+                display block
+            display none
+            content " " 
+            position absolute
+            right -150px
+            bottom 20px
+            background url('../img/main-arrow.png') no-repeat
+            width 115px
+            height 81px
         &:hover
-            box-shadow  0px 2px 22px 0px rgba(46, 43, 43, 0.63)
+            //box-shadow  0px 2px 22px 0px rgba(46, 43, 43, 0.63)
         &:active
             // background #db4d4d linear-gradient(0deg, #e05a5a, #db4d4d)
             top 2px       
@@ -588,7 +615,8 @@
         line-height 1.4em
         color #565656
         margin auto
-        background url('../img/docs-bg.jpg') no-repeat center right
+        background url('../img/docs-bg.jpg') no-repeat center
+        background-size contain
         //background-size 100%
         padding-left 25px
         &
@@ -621,7 +649,7 @@
         margin-bottom 20px
     &_docs
         @media (min-width 1200px)
-            margin-top 100px
+            margin-top 15px
         margin-top 20px
      
 .reviews
