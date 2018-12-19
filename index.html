@@ -36,7 +36,7 @@ $utm =  $_SERVER["QUERY_STRING"];
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Газоснабжение «под ключ»</title>
+  <title>Баланс водопотребления и водоотведения от 1000 руб </title>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png"/>
@@ -45,6 +45,7 @@ $utm =  $_SERVER["QUERY_STRING"];
   <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5"/>
   <meta name="msapplication-TileColor" content="#da532c"/>
   <meta name="theme-color" content="#ffffff"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;amp;subset=cyrillic-ext" rel="stylesheet"/>
   <!--build:css css/all.css-->
   <link rel="stylesheet" href="node_modules/animate.css/animate.min.css"/>
   <link rel="stylesheet" href="tmp/index.css"/>
@@ -62,22 +63,22 @@ $utm =  $_SERVER["QUERY_STRING"];
   <div class="top">
     <div class="container">
       <div class="row">
-        <div class="col col_lg_4 col_md_4 col_sm_5 col_xs_6">
+        <div class="col col_lg_6 col_md_6 col_sm_6 col_xs_5">
           <div class="logo">
             <div class="logo__img"><img src="img/logo.png"/>
             </div>
-            <div class="logo__text">ПРОЕКТНО-СТРОИТЕЛЬНАЯ<br>КОМПАНИЯ
+            <div class="logo__text">Ростове-на-Дону,<br>ул. Текучева, 23, эт. 3
             </div>
           </div>
         </div>
-        <div class="col col_lg_4 col_lg-offset_4 col_md_5 col_md-offset_3 col_sm_7 col_xs_6">
+        <div class="col col_lg_6 col_md_6 col_sm_6 col_xs_7">
           <div class="phone-grup"> 
             <div class="phone-grup__phone">8 (863) 303-38-33
             </div>
             <div class="phone-grup__text">Пн.- пт. с 9:00 до 18:00<br>Сб. с 10:00 до 16:00
             </div>
-          </div>
-          <div class="callme">Заказать звонок
+            <div class="phone-grup__email">info@bk-invent.ru
+            </div>
           </div>
         </div>
       </div>
@@ -86,182 +87,59 @@ $utm =  $_SERVER["QUERY_STRING"];
   <div class="header">
     <div class="container">
       <div class="offer"> 
-        <div class="offer__text start-animate">Почему у 98,3% людей возникают<br>трудности с <span>газификацией дома,</span> <br>а наши клиенты <span>не знают проблем?</span>
-          <div class="offer__items"> 
-            <div class="offer__item"> Газифицируем частные дома «Под Ключ»</div>
-            <div class="offer__item">Минимальные сроки работ </div>
-            <div class="offer__item">Подстроимся под Вас и Ваше расписание</div>
-          </div>
-        </div>
-        <div style="animation-delay: .2s" class="offer__action order start-animate">Получить бесплатную консультацию</div>
-      </div>
-    </div>
-  </div>
-  <div class="froze">
-    <div class="container">
-      <div class="froze__container">
-        <div class="froze__action">Оставьте заявку на бесплатную консультацию специалиста по газификации</div>
-        <div class="froze__description">Заполните форму, и специалист свяжется с Вами в течение 20 минут</div>
-        <div class="form">
-          <form class="ajax">
-            <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
-            <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
-            <input type="hidden" name="url" value="&lt;?echo $url?&gt;"/>
-            <input type="hidden" name="utm" value="&lt;?echo $utm?&gt;"/>
-            <input type="hidden" name="utm_term" value="&lt;?echo $utm_term?&gt;"/>
-            <input type="hidden" name="utm_campaign" value="&lt;?echo $utm_campaign?&gt;"/>
-            <input type="hidden" name="utm_source" value="&lt;?echo $utm_source?&gt;"/>
-            <input type="hidden" name="utm_medium" value="&lt;?echo $utm_medium?&gt;"/>
-            <input type="hidden" name="utm_content" value="&lt;?echo $utm_content?&gt;"/>
-            <input type="hidden" name="order" value="ВК под ключ. Консультация по документам"/>
-            <input type="hidden" name="order" value="ВК под ключ. Консультация по документам"/>
-            <input type="submit" value="Получить консультацию" class="form__btn"/>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="triggers">
-    <div class="container">
-      <div class="row">
-        <div class="col col_lg_3 col_md_3 col_sm_3 col_xs_6">
-          <div class="triggers__items start-animate"><img src="img/triggers__img1.png" class="triggers__img"/>
-            <div class="triggers__text">Опыт работы<br>более 6 лет</div>
-          </div>
-        </div>
-        <div class="col col_lg_3 col_md_3 col_sm_3 col_xs_6">
-          <div style="animation-delay: .3s" class="triggers__items start-animate"><img src="img/triggers__img3.png" class="triggers__img"/>
-            <div class="triggers__text">Подключение<br>за 3 месяца</div>
-          </div>
-        </div>
-        <div class="col col_lg_3 col_md_3 col_sm_3 col_xs_6">
-          <div style="animation-delay: .5s" class="triggers__items start-animate"><img src="img/triggers__img5.png" class="triggers__img"/>
-            <div class="triggers__text">Применяем<br>сертифицированные<br>материалы</div>
-          </div>
-        </div>
-        <div class="col col_lg_3 col_md_3 col_sm_3 col_xs_6">
-          <div style="animation-delay: .6s" class="triggers__items start-animate"><img src="img/triggers__img6.png" class="triggers__img"/>
-            <div class="triggers__text">Цены ниже<br>среднерыночных<br> на 7-12%</div>
-          </div>
-        </div>
+        <div class="offer__text start-animate">Баланс водопотребления и водоотведения <br>от 1000 руб</div>
+        <div style="animation-delay: .2s" class="offer__action order start-animate">Записаться на консультацию </div>
       </div>
     </div>
   </div>
   <div class="container">
-    <div class="title">
-      <div class="title__wrap">
-        <div class="title__text">Этапы подключения
+    <div class="triggers">
+      <div class="row">
+        <div class="col col_lg_2 col_md_2 col_sm_6 col_xs_12">
+          <div class="triggers__items"></div><img src="img/triggers__img1.png" class="triggers__img"/>
+          <div class="triggers__text">Опыт работы<br>более 6 лет</div>
         </div>
-      </div>
-    </div>
-    <div class="tabs">
-      <div class="tabs__item">
-        <div class="tabs__title">
-          <div class="tabs__number">1
-          </div>Сбор пакета документов
-          <div class="tabs__arrow">
-          </div>
+        <div class="col col_lg_2 col_md_2 col_sm_6 col_xs_12">
+          <div class="triggers__items"></div><img src="img/triggers__img5.png" class="triggers__img"/>
+          <div class="triggers__text">Имеем право участия<br>в конкурсах, СРО</div>
         </div>
-        <div class="tabs__text">
-          <p>На первом этапе необходимо сформировать следующий пакет документов:</p>
-          <ul>
-            <li>Расчет максимального потребления газа;</li>
-            <li>Ситуационный план;</li>
-            <li>Правоустанавливающие документы;</li>
-          </ul>
-          <p>И сдать в АО «Газпромгазораспределение».</p>
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+          <div class="triggers__items"></div><img src="img/triggers__img4.png" class="triggers__img"/>
+          <div class="triggers__text">Изготовление балансов<br>от 2-х часов!</div>
         </div>
-      </div>
-      <div class="tabs__item">
-        <div class="tabs__title">
-          <div class="tabs__number">2
-          </div>Получение ТУ или договор на технологическое присоединение
-          <div class="tabs__arrow">
-          </div>
-        </div>
-        <div class="tabs__text">
-          <p>Договор на технологическое присоединение является платным.</p>
-          <p>Его стоимость зависит от максимальной нагрузки газопотребления на вашем объекте, а также приближенности точки подключения. Регламентированный срок выдачи ТУ с момента подачи заявки 14 дней.</p>
-        </div>
-      </div>
-      <div class="tabs__item">
-        <div class="tabs__title">
-          <div class="tabs__number">3
-          </div>Проектирование и согласование 
-          <div class="tabs__arrow">
-          </div>
-        </div>
-        <div class="tabs__text">
-          <p>В процессе проектирования инженер-проектировщик выезжает на место и обследует объект. На месте вы решаете все вопросы по поводу прокладки трубопровода, места установки оборудования, устройства вентиляционных каналов и дымохода. Затем выезжают геодезисты, выполняют топографическую сьемку и заверяют в департаменте Архитектуры. ЗПосле чего проектировщик формирует проектную документацию и согласовывает ее с АО «Газпромгазораспределение». Вся процедура занимает от 3 недель.</p>
-        </div>
-      </div>
-      <div class="tabs__item">
-        <div class="tabs__title">
-          <div class="tabs__number">4
-          </div>Строительно-монтажные работы 
-          <div class="tabs__arrow">
-          </div>
-        </div>
-        <div class="tabs__text">
-          <p>СМР осуществляются в пределах 3 рабочих дней. Их точная стоимость рассчитывается на основании проекта и обследования объекта инженером. В последующем газопровод сдается экспертам Горгаза, а также представителям Ростехнадзора. Безопасность дымоходов подкрепляется актом ВДПО.</p>
-        </div>
-      </div>
-      <div class="tabs__item">
-        <div class="tabs__title">
-          <div class="tabs__number">5
-          </div>Ввод газового трубопровода в эксплуатацию
-          <div class="tabs__arrow">
-          </div>
-        </div>
-        <div class="tabs__text">
-          <p>Для того, чтобы осуществить поставку газа, необходимо пройти ряд процедур. Заключить комплексный договор, получить акт приемки, пройти инструктаж, предоставить копии паспортов на газовые приборы и оборудование, получить акт ВДПО, акт о пригодности СИКЗ, САКЗ, ИФС (при наличии).</p>
-        </div>
-      </div>
-      <div class="tabs__item">
-        <div class="tabs__title">
-          <div class="tabs__number">6
-          </div>Получение лицевого счета
-          <div class="tabs__arrow">
-          </div>
-        </div>
-        <div class="tabs__text">
-          <p>Заключить договор на поставку газа.</p>
+        <div class="col col_lg_4 col_lg-offset_1 col_md_4 col_sm_12 col_xs_12">
+          <div class="about">ООО «БК Инвент» — общество профессионалов, использующих в своей практике инновационный подход к решению как проектных, так и инженерно-строительных задач.</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="docs">
+  <div class="textt">
     <div class="container">
-      <div class="title">
-        <div class="title__wrap">
-          <div class="title__text">Какие документы понадобятся?
+      <div class="textt__title">Для чего он требуется?
+      </div>- Объект только планируется к подключению водоснабжения и/или водоотведения.<br/>- Объект поменял свой статус – жилое на нежилое, поменялся вид деятельности и т.д.<br/>- В случае перезаключения договора между собственником объекта и Водоканалом.<br/>- По истечению срока годности баланса (не более 5 лет).
+    </div>
+  </div>
+  <div class="stock">
+    <div class="container">
+      <div class="row">
+        <div class="col col_lg_5 col_md_5 col_sm_12 col_xs_12 col_lg-offset_1">
+          <div class="stock__title"><span>Внимание </span>акция!</div>
+          <div class="stock__text">Только до <span>31</span> декабря <span> СКИДКА 15%</span></div>
+          <div class="timer">
+            <div id="timer">
+              <div class="timer__action">До конца акции осталось:
+              </div>
+              <div class="digits"></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col col_lg_7">
-          <div class="docs__title">Документы, изготавливаемые ООО «БК Инвент»</div>
-          <ol class="docs__list">
-            <li>СРО (лицензия)</li>
-            <li>Договор на технологическое присоединение</li>
-            <li>Технические условия</li>
-            <li>Рабочая проектная документация</li>
-            <li>Акт о приемке сети</li>
-            <li>Акт ВДПО</li>
-            <li>Комплексный договор</li>
-            <li>Договор на поставку газа</li>
-          </ol>
-        </div>
-        <div class="col col_lg_5">
-          <div class="wall wall_docs">
-            <div class="wall__title">Перечень документов, которые нужны от Вас
-            </div>
+        <div class="col col_lg_5 col_md_6 col_sm_12 col_xs_12">
+          <div class="wall">
+            <div class="wall__title">Заполните форму,чтобы<br>получить скидку 15%</div>
             <div class="form">
               <form class="ajax">
                 <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
                 <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
-                <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
-                <input type="hidden" name="download" value="..."/>
                 <input type="hidden" name="url" value="&lt;?echo $url?&gt;"/>
                 <input type="hidden" name="utm" value="&lt;?echo $utm?&gt;"/>
                 <input type="hidden" name="utm_term" value="&lt;?echo $utm_term?&gt;"/>
@@ -269,9 +147,8 @@ $utm =  $_SERVER["QUERY_STRING"];
                 <input type="hidden" name="utm_source" value="&lt;?echo $utm_source?&gt;"/>
                 <input type="hidden" name="utm_medium" value="&lt;?echo $utm_medium?&gt;"/>
                 <input type="hidden" name="utm_content" value="&lt;?echo $utm_content?&gt;"/>
-                <input type="hidden" name="order" value="ВК под ключ. Консультация по документам"/>
-                <input type="hidden" name="order" value="ВК под ключ"/>
-                <input type="submit" value="Получить список документов" class="form__btn"/>
+                <input type="hidden" name="order" value="Баланс водопотребления и водоотведения. Cкидка 15%"/>
+                <input type="submit" value="Отправить" class="form__btn"/>
               </form>
             </div>
           </div>
@@ -279,81 +156,30 @@ $utm =  $_SERVER["QUERY_STRING"];
       </div>
     </div>
   </div>
-  <div class="reviews">
-    <div class="container">
-      <div class="reviews__title">Выполненные работы</div>
-      <div style="text-align: center">
-        <div data-img="case1.jpg" class="zoom"><img src="img/case1_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-        </div>
-        <div data-img="case2.jpg" class="zoom"><img src="img/case2_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-        </div>
-        <div data-img="case3.jpg" class="zoom"><img src="img/case3_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-        </div>
-        <div data-img="case4.jpg" class="zoom"><img src="img/case4_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-        </div>
-        <div data-img="case5.jpg" class="zoom"><img src="img/case5_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-        </div>
-        <div data-img="case6.jpg" class="zoom"><img src="img/case6_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-        </div>
-        <div data-img="case7.jpg" class="zoom"><img src="img/case7_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-        </div>
-        <div data-img="case8.jpg" class="zoom"><img src="img/case8_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-        </div>
-        <div data-img="case9.jpg" class="zoom"><img src="img/case9_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-        </div>
-        <div data-img="case10.jpg" class="zoom"><img src="img/case10_mini.jpg"/>
-          <div class="zoom__icon">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="container">
-    <div class="title">
-      <div class="title__wrap">
-        <div class="title__text">Допуски СРО
-        </div>
-      </div>
+    <div class="title">Допуски СРО
     </div>
     <div id="doc" class="row">
       <div class="col col_xs_6 col_sm_3">
-        <div style="animation-delay: .2s" data-img="doc1_big.jpg" class="zoom l start-animate"><img src="img/doc1.jpg"/>
+        <div data-img="doc1_big.jpg" class="zoom"><img src="img/doc1.jpg"/>
           <div class="zoom__icon">
           </div>
         </div>
       </div>
       <div class="col col_xs_6 col_sm_3">
-        <div data-img="doc2_big.jpg" class="zoom l start-animate"><img src="img/doc2.jpg"/>
+        <div data-img="doc2_big.jpg" class="zoom"><img src="img/doc2.jpg"/>
           <div class="zoom__icon">
           </div>
         </div>
       </div>
       <div class="col col_xs_6 col_sm_3">
-        <div data-img="doc3_big.jpg" class="zoom r start-animate"><img src="img/doc3.jpg"/>
+        <div data-img="doc3_big.jpg" class="zoom"><img src="img/doc3.jpg"/>
           <div class="zoom__icon">
           </div>
         </div>
       </div>
       <div class="col col_xs_6 col_sm_3">
-        <div style="animation-delay: .2s" data-img="doc4_big.jpg" class="zoom r start-animate"><img src="img/doc4.jpg"/>
+        <div data-img="doc4_big.jpg" class="zoom"><img src="img/doc4.jpg"/>
           <div class="zoom__icon">
           </div>
         </div>
@@ -361,136 +187,122 @@ $utm =  $_SERVER["QUERY_STRING"];
     </div>
   </div>
   <div class="container">
-    <div class="title">
-      <div class="title__wrap">
-        <div class="title__text">Наши партнеры
+    <div class="row">
+      <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+        <div class="product">
+          <div class="product__title">Частные строения ИЖС
+          </div>
+          <div class="product__price product__price_old">От 1 300 руб.
+          </div>
+          <div class="product__price">От 1 100 руб.
+          </div>
+          <div data-product="Баланс водопотребления и водоотведения. Частные строения ИЖС" class="product__btn">Заказать баланс
+          </div>
+        </div>
+      </div>
+      <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+        <div class="product">
+          <div class="product__title">Коммерческие объекты
+          </div>
+          <div class="product__price product__price_old">От 2 100 руб.
+          </div>
+          <div class="product__price">От 1 780 руб.
+          </div>
+          <div data-product="Баланс водопотребления и водоотведения. Коммерческие объекты" class="product__btn">Заказать баланс
+          </div>
+        </div>
+      </div>
+      <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+        <div class="product">
+          <div class="product__title">Муниципальные объекты
+          </div>
+          <div class="product__price product__price_old">От 5 000 руб.
+          </div>
+          <div class="product__price">От 4 250 руб.
+          </div>
+          <div data-product="Баланс водопотребления и водоотведения. Муниципальные объекты" class="product__btn">Заказать баланс
+          </div>
+        </div>
+      </div>
+      <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+        <div class="product">
+          <div class="product__title">Промышленные объекты
+          </div>
+          <div class="product__price product__price_old">От 11 00 руб.
+          </div>
+          <div class="product__price">От 9 350 руб.
+          </div>
+          <div data-product="Баланс водопотребления и водоотведения. Промышленные объекты" class="product__btn">Заказать баланс
+          </div>
         </div>
       </div>
     </div>
-    <div class="logos">
-      <div class="logos__grup"><img src="img/logo1.jpg"/><img src="img/logo2.jpg"/><img src="img/logo3.jpg"/><img src="img/logo4.jpg"/><img src="img/logo5.jpg"/><img src="img/logo6.jpg"/><img src="img/logo7.jpg"/><img src="img/logo8.jpg"/><img src="img/logo9.jpg"/>
-      </div>
-    </div>
   </div>
-  <div class="froze">
+  <div class="scheme">
     <div class="container">
-      <div class="froze__container">
-        <div class="froze__action">Оставьте заявку на бесплатную консультацию специалиста по газификации</div>
-        <div class="froze__description">Заполните форму, и специалист свяжется с Вами в течение 20 минут</div>
-        <div class="form">
-          <form class="ajax">
-            <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
-            <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
-            <input type="hidden" name="url" value="&lt;?echo $url?&gt;"/>
-            <input type="hidden" name="utm" value="&lt;?echo $utm?&gt;"/>
-            <input type="hidden" name="utm_term" value="&lt;?echo $utm_term?&gt;"/>
-            <input type="hidden" name="utm_campaign" value="&lt;?echo $utm_campaign?&gt;"/>
-            <input type="hidden" name="utm_source" value="&lt;?echo $utm_source?&gt;"/>
-            <input type="hidden" name="utm_medium" value="&lt;?echo $utm_medium?&gt;"/>
-            <input type="hidden" name="utm_content" value="&lt;?echo $utm_content?&gt;"/>
-            <input type="hidden" name="order" value="ВК под ключ. Консультация по документам"/>
-            <input type="hidden" name="order" value="ВК под ключ. Консультация по документам"/>
-            <input type="submit" value="Получить консультацию" class="form__btn"/>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="title">
-      <div class="title__wrap">
-        <div class="title__text">Cхема работы
-        </div>
-      </div>
-    </div>
-    <div id="scheme" class="scheme">
+      <div class="title">Как мы работаем</div>
       <div class="row">
-        <div class="col col col_lg_3">
-          <div class="scheme__item scheme__item_step_1 start-animate">
-            <div class="scheme__title">Заявка</div>
-            <div class="scheme__text">Вы оставляете заявку или звоните нам по телефону</div>
-            <div class="btn btn_style_small order">Оставить заявку</div>
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+          <div class="scheme__item">
+            <div class="scheme__n">1</div>
+            <div class="scheme__title">Заявка<br></div>
+            <div class="scheme__text">Вы нам звоните, заполняете форму обратной связи или пишите на e-mail</div>
           </div>
         </div>
-        <div class="col col_lg_5">
-          <div style="animation-delay: 1s" class="scheme__item scheme__item_step_3 start-animate">
-            <div class="scheme__title">Заключение подрядного договора</div>
-            <div class="scheme__text">Мы формируем коммерческое предложение и составляем договор подряда</div>
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+          <div class="scheme__item">
+            <div class="scheme__n">2</div>
+            <div class="scheme__title">Информационная<br>справка</div>
+            <div class="scheme__text">Мы отправляем вам информационную справку, вы ее заполняете и отправляете обратно нам.</div>
           </div>
         </div>
-        <div class="col col_lg_3">
-          <div style="animation-delay: 2s" class="scheme__item scheme__item_step_5 start-animate">
-            <div class="scheme__title">Осуществление работ</div>
-            <div class="scheme__text">Проводим необходимые работы по проектированию и монтажу</div>
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+          <div class="scheme__item">
+            <div class="scheme__n">3</div>
+            <div class="scheme__title">Коммерческое<br>предложение</div>
+            <div class="scheme__text">Мы формируем коммерческое предложение на основании заполненной справки и отправляем вам на согласование</div>
           </div>
         </div>
-      </div>
-      <div class="scheme__progress-bar"></div>
-      <div class="row">
-        <div class="col col_lg_5">
-          <div style="animation-delay: .5s" class="scheme__item scheme__item_step_2 start-animate">
-            <div class="scheme__title">Бесплатное обследование объекта</div>
-            <div class="scheme__text">Мы отправляем главного инженера на объект для выяснения подробностей</div>
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+          <div class="scheme__item">
+            <div class="scheme__n">4</div>
+            <div class="scheme__title">Контракт</div>
+            <div class="scheme__text">Предоставляем вам полный пакет документов и заключаем контракт</div>
           </div>
         </div>
-        <div class="col col_lg_4">
-          <div style="animation-delay: 1.5s" class="scheme__item scheme__item_step_4 start-animate">
-            <div class="scheme__title">Предоставление документов</div>
-            <div class="scheme__text">Вы предоставляете нам все необходимые документы</div>
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+          <div class="scheme__item">
+            <div class="scheme__n">5</div>
+            <div class="scheme__title">Изготовление<br>баланса</div>
+            <div class="scheme__text">Занимает 1 рабочий день с момента предоставления информационной справки</div>
           </div>
         </div>
-        <div class="col col_lg_3">
-          <div style="animation-delay: 2.5s" class="scheme__item scheme__item_step_6 start-animate">
-            <div class="scheme__title">Получение лицевого счета</div>
-            <div class="scheme__text">Гарантируем, что вы получите лицевой счет на газ</div>
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+          <div class="scheme__item">
+            <div class="scheme__n">6</div>
+            <div class="scheme__title">Выдача<br>баланса</div>
+            <div class="scheme__text">Происходит на основании подписанных актов выполненных работ и обмена подписанных документов</div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="scheme scheme_mod_1">
-      <div class="row">
-        <div class="col col_sm_6">
-          <div class="scheme__item scheme__item_step_1">
-            <div class="scheme__title">Заявка</div>
-            <div class="scheme__text">Вы оставляете заявку или звоните нам по телефону</div>
-            <div class="btn btn_style_small order">Оставить заявку</div>
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+          <div class="scheme__item">
+            <div class="scheme__n">7</div>
+            <div class="scheme__title">Оплата<br>по договору</div>
+            <div class="scheme__text">И только после того, как вы получили баланс на руки, вы оплачиваете выставленный счет</div>
           </div>
         </div>
-        <div class="col col_sm_6">
-          <div class="scheme__item scheme__item_step_2">
-            <div class="scheme__title">Бесплатное обследование объекта</div>
-            <div class="scheme__text">Мы отправляем главного инженера на объект для выяснения подробностей</div>
-          </div>
-        </div>
-        <div class="col col_sm_6">
-          <div class="scheme__item scheme__item_step_3">
-            <div class="scheme__title">Заключение подрядного договора</div>
-            <div class="scheme__text">Мы формируем коммерческое предложение и составляем договор подряда</div>
-          </div>
-        </div>
-        <div class="col col_sm_6">
-          <div class="scheme__item scheme__item_step_4">
-            <div class="scheme__title">Предоставление документов</div>
-            <div class="scheme__text">Вы предоставляете нам все необходимые документы</div>
-          </div>
-        </div>
-        <div class="col col_sm_6">
-          <div class="scheme__item scheme__item_step_5">
-            <div class="scheme__title">Осуществление работ</div>
-            <div class="scheme__text">Проводим необходимые работы по проектированию и монтажу</div>
-          </div>
-        </div>
-        <div class="col col_sm_6">
-          <div class="scheme__item scheme__item_step_6">
-            <div class="scheme__title">Получение лицевого счета</div>
-            <div class="scheme__text">Гарантируем, что вы получите лицевой счет на газ</div>
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+          <div class="scheme__item">
+            <div class="scheme__n">8</div>
+            <div class="scheme__title">Гарантия</div>
+            <div class="scheme__text">Мы даем гарантию, что Водоканал ваш баланс примет. Вы даете нам обратную связь, когда это произошло!</div>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="questions">
-    <div class="questions__title">У вас остались вопросы?</div>Задайте их нашему специалисту!
+    <div class="questions__title">Остались вопросы?</div>Задайте их нашему специалисту!
   </div>
   <div class="btn order">Получить бесплатную консультацию</div>
   <div id="map" class="map"></div>
@@ -516,7 +328,7 @@ $utm =  $_SERVER["QUERY_STRING"];
       </div>
     </div>
   </div>
-  <div id="modal__callme" class="modal">
+  <div id="modal__product" class="modal">
     <div class="modal__wrapper">
       <div class="modal__dialog">
         <div class="close modal__close"></div>
@@ -525,6 +337,7 @@ $utm =  $_SERVER["QUERY_STRING"];
           <form class="ajax">
             <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
             <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
+            <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
             <input type="hidden" name="url" value="&lt;?echo $url?&gt;"/>
             <input type="hidden" name="utm" value="&lt;?echo $utm?&gt;"/>
             <input type="hidden" name="utm_term" value="&lt;?echo $utm_term?&gt;"/>
@@ -532,9 +345,8 @@ $utm =  $_SERVER["QUERY_STRING"];
             <input type="hidden" name="utm_source" value="&lt;?echo $utm_source?&gt;"/>
             <input type="hidden" name="utm_medium" value="&lt;?echo $utm_medium?&gt;"/>
             <input type="hidden" name="utm_content" value="&lt;?echo $utm_content?&gt;"/>
-            <input type="hidden" name="order" value="ВК под ключ. Консультация по документам"/>
-            <input type="hidden" name="order" value="ВК под ключ. Заказ звонка"/>
-            <input type="submit" value="Заказать звонок" class="form__btn"/>
+            <input type="hidden" name="order" value="Баланс водопотребления и водоотведения" id="product-input"/>
+            <input type="submit" value="Заказать" class="form__btn"/>
           </form>
         </div>
       </div>
@@ -557,8 +369,7 @@ $utm =  $_SERVER["QUERY_STRING"];
             <input type="hidden" name="utm_source" value="&lt;?echo $utm_source?&gt;"/>
             <input type="hidden" name="utm_medium" value="&lt;?echo $utm_medium?&gt;"/>
             <input type="hidden" name="utm_content" value="&lt;?echo $utm_content?&gt;"/>
-            <input type="hidden" name="order" value="ВК под ключ. Консультация по документам"/>
-            <input type="hidden" name="order" value="ВК под ключ. Консультация"/>
+            <input type="hidden" name="order" value="Баланс водопотребления и водоотведения. Консультация"/>
             <input type="submit" value="Отправить" class="form__btn"/>
           </form>
         </div>
@@ -570,14 +381,6 @@ $utm =  $_SERVER["QUERY_STRING"];
       <div class="modal__dialog">
         <div class="close modal__close"></div>
         <div class="modal__title"><b>Ваша заявка принята</b> <br>Наш специалист свяжется с вами в течении 20 минут</div>
-      </div>
-    </div>
-  </div>
-  <div id="modal__download" class="modal">
-    <div class="modal__wrapper">
-      <div class="modal__dialog">
-        <div class="close modal__close"></div>
-        <div class="modal__title">Документы можно скачать по ссылке</div><a href="http://lp.bk-invent.ru/docs2.pdf" target="_blank" class="btn">Скачать</a>
       </div>
     </div>
   </div>
@@ -599,8 +402,8 @@ $utm =  $_SERVER["QUERY_STRING"];
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    ym(51570953, "init", {
-    id:51570953,
+    ym(51637940, "init", {
+    id:51637940,
     clickmap:true,
     trackLinks:true,
     accurateTrackBounce:true,
@@ -608,6 +411,6 @@ $utm =  $_SERVER["QUERY_STRING"];
     });
   </script>
   <noscript>
-    <div><img src="https://mc.yandex.ru/watch/51570953" style="position:absolute; left:-9999px;" alt=""/></div>
+    <div><img src="https://mc.yandex.ru/watch/51637940" style="position:absolute; left:-9999px;" alt=""/></div>
   </noscript>
 </body>

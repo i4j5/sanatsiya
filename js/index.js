@@ -26,15 +26,48 @@
 
 $(document).ready(()=>{
 
-	let yatarget = 'order'
+  	let now = new Date("December 31, 2018");
 
-	$('.callme').click(function(event) {
-		yatarget = 'callme'
-		$('#modal__callme').openModal()
+	let endTS = now.getTime();
+
+	setInterval(function(){
+	    now = new Date();
+	    let totalRemains = (endTS-now.getTime());
+	    if (totalRemains>1){ 
+	        let RemainsSec=(parseInt(totalRemains/1000)); 
+	        let RemainsFullDays=(parseInt(RemainsSec/(24*60*60))); 
+	        let secInLastDay=RemainsSec-RemainsFullDays*24*3600; 
+	        let RemainsFullHours=(parseInt(secInLastDay/3600)); 
+	        if (RemainsFullHours<10){RemainsFullHours="0"+RemainsFullHours}; 
+	        let secInLastHour=secInLastDay-RemainsFullHours*3600; 
+	        let RemainsMinutes=(parseInt(secInLastHour/60)); 
+	        if (RemainsMinutes<10){RemainsMinutes="0"+RemainsMinutes}; 
+	        let lastSec=secInLastHour-RemainsMinutes*60; 
+	        if (lastSec<10){lastSec="0"+lastSec}; 
+	        if (RemainsFullDays<10){RemainsFullDays="0"+RemainsFullDays};
+	        let str = `<div class='timer__el'><div class='timer__numeral'>${RemainsFullDays}</div><div class='timer__text'>Дней</div></div>`
+	        str = str + `<div class='timer__el'><div class='timer__numeral'>${RemainsFullHours}</div><div class='timer__text'>Часов</div></div>`
+	        str = str + `<div class='timer__el'><div class='timer__numeral'>${RemainsMinutes}</div><div class='timer__text'>Минуты</div></div>`
+	        str = str + `<div class='timer__el'><div class='timer__numeral'>${lastSec}</div><div class='timer__text'>Секунды</div></div>`
+	        $('.digits').html(str)
+
+	        //$('.digits').html("<span>"+RemainsFullDays+"<div>Дней</div></span> <span>"+RemainsFullHours+"<div>Часов</div></span> <span>"+RemainsMinutes+"<div>Минуты</div></span> <span class='red'>"+lastSec+"<div>Секунды</div></span>");
+	    } 
+	    else {$("#timer").remove();} 
+	},1000);
+
+	let yatarget = 'stock'
+
+	$('.product__btn').click(function(event) {
+		/// Баланс водопотребления и водоотведения
+		let product = $(this).data('product')
+		$('#product-input').val(product)
+		yatarget = 'order'
+		$('#modal__product').openModal()
 	})
 
 	$('.order').click(function(event) {
-		yatarget = 'order'
+		yatarget = 'advice'
 		$('#modal__order').openModal()
 	})
 
@@ -62,43 +95,6 @@ $(document).ready(()=>{
 		$('.logos img').addClass('animated zoomIn')
 		
 	}, {offset: '90%'})
-
-
-	let $items = $('.tabs__item')
-	$items.each((index, el) => {
-		let $el = $(el)
-		$el.children('.tabs__title').click(function(event) {
-			$el.toggleClass('tabs__item_active')
-
-			let $progressBar = $el.children('.tabs__text').children('.progress-bar')
-			let interest = $progressBar.data('interest')
-
-			
-			if ( $el.hasClass('tabs__item_active') ) {
-				$progressBar.children('.progress-bar__pace').children('.progress-bar__interest').text('')
-				$progressBar.children('.progress-bar__pace').width('0%')
-				$el.children('.tabs__text').slideDown(500)
-				setTimeout(() => {
-					$progressBar.children('.progress-bar__pace').width(interest + '%')
-					let n = 0
-					let timerId = setInterval(() => {
-						++n
-						$progressBar.children('.progress-bar__pace').children('.progress-bar__interest').text(n + '%')
-						// $progressBar.children('.progress-bar__pace').width(n + '%')
-					}, 1000 / interest)
-
-					setTimeout(() => {
-						clearInterval(timerId)
-					},1000)
-				}, 500)
-			} else {
-				$el.children('.tabs__text').slideUp(500)
-				setTimeout(() => {
-					$progressBar.children('.progress-bar__pace').width('0%')
-				}, 500)
-			}
-		});	
-	})
 
 
 	$('.ajax').each(function(){
@@ -135,8 +131,8 @@ $(document).ready(()=>{
 	           } else {
            			$('#modal__ok').openModal()
 	           }
-	           yaCounter51570953.reachGoal(yatarget)
-	           yatarget = 'order'
+	           yaCounter51637940.reachGoal(yatarget)
+	           yatarget = 'stock'
 	        })
 	        .always(function() {
 			   //btn.val(btnText)
@@ -193,18 +189,6 @@ $(document).ready(()=>{
 
 })
 
-// $(document).ready(function(){
-//   $('.slider').bxSlider({
-//   	pager: true,
-//   	nextText: '',
-//   	prevText: '',
-//   	touchEnabled: false,
-//   	auto: true,
-//   	pause: 2800,
-//   	stopAutoOnClick: true,
-//   	autoHover: true
-//   });
-// });
 
 $(window).on('load', e => {
 	window.setTimeout(function() {

@@ -36,7 +36,7 @@ html(lang="ru")
 head
   meta(charset="UTF-8")
   meta(name="viewport" content="width=device-width, initial-scale=1")
-  title Газоснабжение «под ключ»
+  title Баланс водопотребления и водоотведения от 1000 руб 
 
   link(rel="icon" href="img/favicon.ico" type="image/x-icon")
   link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
@@ -49,7 +49,7 @@ head
   meta(name='theme-color', content='#ffffff')
 
 
-
+  link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic-ext" rel="stylesheet")
   //build:css css/all.css
   link(rel="stylesheet", href="node_modules/animate.css/animate.min.css")
   link(rel="stylesheet", href="tmp/index.css")
@@ -64,384 +64,189 @@ body.page
   .top
     .container
       .row
-        +b.col._lg_4._md_4._sm_5._xs_6
+        +b.col._lg_6._md_6._sm_6._xs_5
           +b.logo
             +e.img
               img(src='img/logo.png')
-            +e.text ПРОЕКТНО-СТРОИТЕЛЬНАЯ<br>КОМПАНИЯ
-        +b.col._lg_4._lg-offset_4._md_5._md-offset_3._sm_7._xs_6
+            +e.text Ростове-на-Дону,<br>ул. Текучева, 23, эт. 3
+        +b.col._lg_6._md_6._sm_6._xs_7
           +b.phone-grup 
             +e.phone 8 (863) 303-38-33
             +e.text Пн.- пт. с 9:00 до 18:00<br>Сб. с 10:00 до 16:00
-          +b.callme Заказать звонок
+            +e.email info@bk-invent.ru
   .header
     .container
       .offer 
         .offer__text.start-animate
-          |Почему у 98,3% людей возникают<br>трудности с <span>газификацией дома,</span> <br>а наши клиенты <span>не знают проблем?</span>
-          .offer__items 
-            .offer__item  Газифицируем частные дома «Под Ключ»
-            .offer__item Минимальные сроки работ 
-            .offer__item Подстроимся под Вас и Ваше расписание
-        .offer__action.order.start-animate(style="animation-delay: .2s") Получить бесплатную консультацию
-
-  .froze
-    .container
-      .froze__container
-        .froze__action Оставьте заявку на бесплатную консультацию специалиста по газификации
-        .froze__description Заполните форму, и специалист свяжется с Вами в течение 20 минут
-        +b.form
-          form.ajax
-            input(placeholder='Введите Ваше имя' name='name').input.input_type_name
-            input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
-            input(type='hidden', name='url', value='<?echo $url?>')
-            input(type='hidden', name='utm', value='<?echo $utm?>')
-            input(type='hidden', name='utm_term', value='<?echo $utm_term?>')
-            input(type='hidden', name='utm_campaign', value='<?echo $utm_campaign?>')
-            input(type='hidden', name='utm_source', value='<?echo $utm_source?>')
-            input(type='hidden', name='utm_medium', value='<?echo $utm_medium?>')
-            input(type='hidden', name='utm_content', value='<?echo $utm_content?>')
-            input(type='hidden', name='order', value='ВК под ключ. Консультация по документам')
-            input(type="hidden" name="order" value="ВК под ключ. Консультация по документам")
-            input(type='submit' value='Получить консультацию').form__btn
+          |Баланс водопотребления и водоотведения <br>от 1000 руб
+        .offer__action.order.start-animate(style="animation-delay: .2s") Записаться на консультацию 
 
 
-  .triggers
-    .container
-      .row
-        +b.col._lg_3._md_3._sm_3._xs_6
-          .triggers__items.start-animate
-            img(src='img/triggers__img1.png').triggers__img
-            .triggers__text Опыт работы<br>более 6 лет
-        //- +b.col._lg_4._md_4._sm_4._xs_6
-        //-   .triggers__items(style="animation-delay: .2s").start-animate
-        //-     img(src='img/triggers__img2.png').triggers__img
-        //-     .triggers__text Гарантия 24 месяца<br>на монтажные работы
-        +b.col._lg_3._md_3._sm_3._xs_6
-          .triggers__items(style="animation-delay: .3s").start-animate
-            img(src='img/triggers__img3.png').triggers__img
-            .triggers__text Подключение<br>за 3 месяца
-        //- +b.col._lg_4._md_4._sm_4._xs_6
-        //-   .triggers__items(style="animation-delay: .4s").start-animate
-        //-     img(src='img/triggers__img4.png').triggers__img
-        //-     .triggers__text Гарантия получения<br>лицевого счета
-        +b.col._lg_3._md_3._sm_3._xs_6
-          .triggers__items(style="animation-delay: .5s").start-animate
-            img(src='img/triggers__img5.png').triggers__img
-            .triggers__text Применяем<br>сертифицированные<br>материалы
-        +b.col._lg_3._md_3._sm_3._xs_6
-          .triggers__items(style="animation-delay: .6s").start-animate
-            img(src='img/triggers__img6.png').triggers__img
-            .triggers__text Цены ниже<br>среднерыночных<br> на 7-12%
   .container
-    +b.title
-      +e.wrap
-        +e.text Этапы подключения
-    +b.tabs
-      +e.item
-        +e.title
-          +e.number 1
-          |Сбор пакета документов
-          +e.arrow
-        +e.text
-          p На первом этапе необходимо сформировать следующий пакет документов:
-          ul
-            li Расчет максимального потребления газа;
-            li Ситуационный план;
-            li Правоустанавливающие документы;
-          p И сдать в АО «Газпромгазораспределение».
-
-      +e.item
-        +e.title
-          +e.number 2
-          |Получение ТУ или договор на технологическое присоединение
-          +e.arrow
-        +e.text
-          p Договор на технологическое присоединение является платным.
-          p
-            | Его стоимость зависит от максимальной нагрузки газопотребления на вашем объекте, а также приближенности точки подключения. Регламентированный срок выдачи ТУ с момента подачи заявки 14 дней.
-
-
-      +e.item
-        +e.title
-          +e.number 3
-          |Проектирование и согласование 
-          +e.arrow
-        +e.text
-          p В процессе проектирования инженер-проектировщик выезжает на место и обследует объект. На месте вы решаете все вопросы по поводу прокладки трубопровода, места установки оборудования, устройства вентиляционных каналов и дымохода. Затем выезжают геодезисты, выполняют топографическую сьемку и заверяют в департаменте Архитектуры. ЗПосле чего проектировщик формирует проектную документацию и согласовывает ее с АО «Газпромгазораспределение». Вся процедура занимает от 3 недель.
-
-
-      +e.item
-        +e.title
-          +e.number 4
-          |Строительно-монтажные работы 
-          +e.arrow
-         +e.text
-          p СМР осуществляются в пределах 3 рабочих дней. Их точная стоимость рассчитывается на основании проекта и обследования объекта инженером. В последующем газопровод сдается экспертам Горгаза, а также представителям Ростехнадзора. Безопасность дымоходов подкрепляется актом ВДПО.
-
-      +e.item
-        +e.title
-          +e.number 5
-          |Ввод газового трубопровода в эксплуатацию
-          +e.arrow
-        +e.text
-          p Для того, чтобы осуществить поставку газа, необходимо пройти ряд процедур. Заключить комплексный договор, получить акт приемки, пройти инструктаж, предоставить копии паспортов на газовые приборы и оборудование, получить акт ВДПО, акт о пригодности СИКЗ, САКЗ, ИФС (при наличии).
-
-      +e.item
-        +e.title
-          +e.number 6
-          |Получение лицевого счета
-          +e.arrow
-        +e.text
-          p Заключить договор на поставку газа.
-
-  .docs
-    .container
-      +b.title
-        +e.wrap
-          +e.text Какие документы понадобятся?
+    .triggers
       .row
-        +b.col_lg_7
-          .docs__title Документы, изготавливаемые ООО «БК Инвент»
-          ol.docs__list
-            li СРО (лицензия)
-            li Договор на технологическое присоединение
-            li Технические условия
-            li Рабочая проектная документация
-            li Акт о приемке сети
-            li Акт ВДПО
-            li Комплексный договор
-            li Договор на поставку газа
-        +b.col_lg_5
-          +b.wall._docs
-            //- +e.title Получить перечень необходимых документов для предоставления ООО «БК Инвент»
-            +e.title Перечень документов, которые нужны от Вас
-            +b.form
-              //- input(placeholder='Введите Ваше имя').input.input_type_name
-              //- input(placeholder='Введите Ваш телефон').input.input_type_phone
-              //- input(placeholder='Введите Ваш E-mail').input.input_type_email
-              //- +e.btn Скачать документ
+        +b.col._lg_2._md_2._sm_6._xs_12
+          .triggers__items
+          img(src='img/triggers__img1.png').triggers__img
+          .triggers__text Опыт работы<br>более 6 лет
+        +b.col._lg_2._md_2._sm_6._xs_12
+          .triggers__items
+          img(src='img/triggers__img5.png').triggers__img
+          .triggers__text Имеем право участия<br>в конкурсах, СРО
+        +b.col._lg_3._md_3._sm_6._xs_12
+          .triggers__items
+          img(src='img/triggers__img4.png').triggers__img
+          .triggers__text Изготовление балансов<br>от 2-х часов!
+        +b.col._lg_4._lg-offset_1._md_4._sm_12._xs_12
+          .about ООО «БК Инвент» — общество профессионалов, использующих в своей практике инновационный подход к решению как проектных, так и инженерно-строительных задач.
+
+  +b.textt
+    .container
+      +e.title Для чего он требуется?
+      |- Объект только планируется к подключению водоснабжения и/или водоотведения.
+      br
+      |- Объект поменял свой статус – жилое на нежилое, поменялся вид деятельности и т.д.
+      br
+      |- В случае перезаключения договора между собственником объекта и Водоканалом.
+      br
+      |- По истечению срока годности баланса (не более 5 лет).
+
+
+  .stock
+    .container
+      .row
+        +b.col._lg_5._md_5._sm_12._xs_12._lg-offset_1
+            
+          .stock__title
+            span Внимание 
+            | акция!
+          .stock__text Только до <span>31</span> декабря <span> СКИДКА 15%</span>
+          +b.timer
+            #timer
+              +e.action До конца акции осталось:
+              .digits
+            //- +e.el
+            //-   +e.numeral 33
+            //-   +e.text дней
+            //- +e.el
+            //-   +e.numeral 33
+            //-   +e.text часов
+            //- +e.el
+            //-   +e.numeral 33
+            //-   +e.text минут
+        +b.col._lg_5._md_6._sm_12._xs_12
+          .wall
+            .wall__title Заполните форму,чтобы<br>получить скидку 15%
+            .form
               form.ajax
                 input(placeholder='Введите Ваше имя' name='name').input.input_type_name
                 input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
-                input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
-                input(type="hidden" name="download" value="...")
-                input(type='hidden', name='url', value='<?echo $url?>')
-                input(type='hidden', name='utm', value='<?echo $utm?>')
-                input(type='hidden', name='utm_term', value='<?echo $utm_term?>')
-                input(type='hidden', name='utm_campaign', value='<?echo $utm_campaign?>')
-                input(type='hidden', name='utm_source', value='<?echo $utm_source?>')
-                input(type='hidden', name='utm_medium', value='<?echo $utm_medium?>')
-                input(type='hidden', name='utm_content', value='<?echo $utm_content?>')
-                input(type='hidden', name='order', value='ВК под ключ. Консультация по документам')
-                input(type="hidden" name="order" value="ВК под ключ")
-                input(type='submit' value='Получить список документов').form__btn
-    //-+b.btn_style_blue Оставить заявку на консультацию инженера
+                input(type='hidden', name='url', value="<?echo $url?>")
+                input(type='hidden', name='utm', value="<?echo $utm?>")
+                input(type='hidden', name='utm_term', value="<?echo $utm_term?>")
+                input(type='hidden', name='utm_campaign', value="<?echo $utm_campaign?>")
+                input(type='hidden', name='utm_source', value="<?echo $utm_source?>")
+                input(type='hidden', name='utm_medium', value="<?echo $utm_medium?>")
+                input(type='hidden', name='utm_content', value="<?echo $utm_content?>")
+                input(type='hidden', name='order', value='Баланс водопотребления и водоотведения. Cкидка 15%')
+                input(type='submit' value='Отправить').form__btn
 
-  .reviews
-    .container
-      .reviews__title Выполненные работы
-      div(style="text-align: center")
-        +b.zoom(data-img="case1.jpg")
-          img(src="img/case1_mini.jpg")
-          +e.icon
-        +b.zoom(data-img="case2.jpg")
-          img(src="img/case2_mini.jpg")
-          +e.icon
-        +b.zoom(data-img="case3.jpg")
-          img(src="img/case3_mini.jpg")
-          +e.icon
-        +b.zoom(data-img="case4.jpg")
-          img(src="img/case4_mini.jpg")
-          +e.icon
-        +b.zoom(data-img="case5.jpg")
-          img(src="img/case5_mini.jpg")
-          +e.icon
-        +b.zoom(data-img="case6.jpg")
-          img(src="img/case6_mini.jpg")
-          +e.icon
-        +b.zoom(data-img="case7.jpg")
-          img(src="img/case7_mini.jpg")
-          +e.icon
-        +b.zoom(data-img="case8.jpg")
-          img(src="img/case8_mini.jpg")
-          +e.icon
-        +b.zoom(data-img="case9.jpg")
-          img(src="img/case9_mini.jpg")
-          +e.icon
-        +b.zoom(data-img="case10.jpg")
-          img(src="img/case10_mini.jpg")
-          +e.icon
-
-      //-   +b.col._xs_12._md_10._md-offset_1
-      //-     .slider
-      //-       .reviews__gallery
-      //-         .row
-      //-           +b.col._xs_12._sm_6
-      //-             .reviews__img
-      //-                 img(src="img/case1_mini.jpg")
-      //-             .reviews__imgs
-      //-           +b.col._xs_12._sm_6
-      //-             .reviews__imgs
-      //-               .reviews__img.reviews__img_size_small
-      //-                 img(src="img/case2_mini.jpg")
-      //-               .reviews__img.reviews__img_size_small
-      //-                 img(src="img/case3_mini.jpg")
-      //-             .reviews__img
-      //-                 img(src="http://placehold.it/500x250")
-      //-       .reviews__gallery
-      //-         .row
-      //-           +b.col._xs_12._sm_6
-      //-             .reviews__imgs
-      //-               .reviews__img.reviews__img_size_small
-      //-                 img(src="http://placehold.it/500x250")
-      //-               .reviews__img.reviews__img_size_small
-      //-                 img(src="http://placehold.it/500x250")
-      //-               .reviews__img.reviews__img_size_small
-      //-                 img(src="http://placehold.it/500x250")
-      //-             .reviews__img
-      //-                 img(src="http://placehold.it/500x205")
-      //-             .reviews__imgs
-      //-               .reviews__img.reviews__img_size_small
-      //-                 img(src="http://placehold.it/500x250")
-      //-               .reviews__img.reviews__img_size_small
-      //-                 img(src="http://placehold.it/500x250")
-      //-               .reviews__img.reviews__img_size_small
-      //-                 img(src="http://placehold.it/500x250")
-      //-           +b.col._xs_12._sm_6
-      //-             .reviews__imgs
-      //-               .reviews__img.reviews__img_size_small
-      //-                 img(src="http://placehold.it/500x250")
-      //-               .reviews__img.reviews__img_size_small
-      //-                 img(src="http://placehold.it/500x250")
-      //-             .reviews__img
-      //-                 img(src="http://placehold.it/500x250")
-                //- +b.col._xs_12._md_6
-                //-   .reviews__name Алина Евсеева
-                //-   .reviews__text Я обращалась в компанию БК Инвент для того, чтобы подключить канализацию в дом. Уже сейчас пользуюсь ею, чему очень рада. Долго не могла найти общий язык с Водоканалом, а обратившись в организацию БК Инвент, все мои вопросы были решены за 3 месяца, и построили, и сдали. Теперь мне не приходится как большинству моих соседей пользоваться ямой. Рекомендую обращаться в эту организацию!!!
-  
   .container
-    +b.title
-      +e.wrap
-        +e.text Допуски СРО
+    +b.title Допуски СРО
     .row#doc
       +b.col._xs_6._sm_3
-        +b.zoom(style="animation-delay: .2s" data-img="doc1_big.jpg").l.start-animate
+        +b.zoom(data-img="doc1_big.jpg")
           img(src="img/doc1.jpg")
           +e.icon
       +b.col._xs_6._sm_3
-        +b.zoom.l.start-animate(data-img="doc2_big.jpg")
+        +b.zoom(data-img="doc2_big.jpg")
           img(src="img/doc2.jpg")
           +e.icon
       +b.col._xs_6._sm_3
-        +b.zoom.r.start-animate(data-img="doc3_big.jpg")
+        +b.zoom(data-img="doc3_big.jpg")
           img(src="img/doc3.jpg")
           +e.icon
       +b.col._xs_6._sm_3
-        +b.zoom(style="animation-delay: .2s" data-img="doc4_big.jpg").r.start-animate
+        +b.zoom(data-img="doc4_big.jpg")
             img(src="img/doc4.jpg")
             +e.icon
 
   .container
-    +b.title
-      +e.wrap
-        +e.text Наши партнеры
-    +b.logos
-      +e.grup
-        img(src="img/logo1.jpg")
-        img(src="img/logo2.jpg")
-        img(src="img/logo3.jpg")
-        img(src="img/logo4.jpg")
-        img(src="img/logo5.jpg")
-        img(src="img/logo6.jpg")
-        img(src="img/logo7.jpg")
-        img(src="img/logo8.jpg")
-        img(src="img/logo9.jpg")
-  .froze
+    .row
+      +b.col._lg_3._md_3._sm_6._xs_12
+        +b.product
+          +e.title Частные строения ИЖС
+          +e.price._old От 1 300 руб.
+          +e.price От 1 100 руб.
+          +e.btn(data-product="Баланс водопотребления и водоотведения. Частные строения ИЖС") Заказать баланс
+      +b.col._lg_3._md_3._sm_6._xs_12
+        +b.product
+          +e.title Коммерческие объекты
+          +e.price._old От 2 100 руб.
+          +e.price От 1 780 руб.
+          +e.btn(data-product="Баланс водопотребления и водоотведения. Коммерческие объекты") Заказать баланс
+      +b.col._lg_3._md_3._sm_6._xs_12
+        +b.product
+          +e.title Муниципальные объекты
+          +e.price._old От 5 000 руб.
+          +e.price От 4 250 руб.
+          +e.btn(data-product="Баланс водопотребления и водоотведения. Муниципальные объекты") Заказать баланс
+      +b.col._lg_3._md_3._sm_6._xs_12
+        +b.product
+          +e.title Промышленные объекты
+          +e.price._old От 11 00 руб.
+          +e.price От 9 350 руб.
+          +e.btn(data-product="Баланс водопотребления и водоотведения. Промышленные объекты") Заказать баланс
+
+  .scheme
     .container
-      .froze__container
-        .froze__action Оставьте заявку на бесплатную консультацию специалиста по газификации
-        .froze__description Заполните форму, и специалист свяжется с Вами в течение 20 минут
-        +b.form
-          form.ajax
-            input(placeholder='Введите Ваше имя' name='name').input.input_type_name
-            input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
-            input(type='hidden', name='url', value='<?echo $url?>')
-            input(type='hidden', name='utm', value='<?echo $utm?>')
-            input(type='hidden', name='utm_term', value='<?echo $utm_term?>')
-            input(type='hidden', name='utm_campaign', value='<?echo $utm_campaign?>')
-            input(type='hidden', name='utm_source', value='<?echo $utm_source?>')
-            input(type='hidden', name='utm_medium', value='<?echo $utm_medium?>')
-            input(type='hidden', name='utm_content', value='<?echo $utm_content?>')
-            input(type='hidden', name='order', value='ВК под ключ. Консультация по документам')
-            input(type="hidden" name="order" value="ВК под ключ. Консультация по документам")
-            input(type='submit' value='Получить консультацию').form__btn
-
-  .container
-    +b.title
-      +e.wrap
-        +e.text Cхема работы
-    .scheme#scheme
+      .title Как мы работаем
       .row
-        +b.col.col_lg_3
-          .scheme__item.scheme__item_step_1.start-animate
-            .scheme__title Заявка
-            .scheme__text Вы оставляете заявку или звоните нам по телефону
-            .btn.btn_style_small.order Оставить заявку
-        +b.col._lg_5
-          .scheme__item.scheme__item_step_3(style="animation-delay: 1s").start-animate
-            .scheme__title Заключение подрядного договора
-            .scheme__text Мы формируем коммерческое предложение и составляем договор подряда
+        +b.col._lg_3._md_3._sm_6._xs_12
+          .scheme__item
+            .scheme__n 1
+            .scheme__title Заявка<br>
+            .scheme__text Вы нам звоните, заполняете форму обратной связи или пишите на e-mail
+        +b.col._lg_3._md_3._sm_6._xs_12
+          .scheme__item
+            .scheme__n 2
+            .scheme__title Информационная<br>справка
+            .scheme__text Мы отправляем вам информационную справку, вы ее заполняете и отправляете обратно нам.
+        +b.col._lg_3._md_3._sm_6._xs_12
+          .scheme__item
+            .scheme__n 3
+            .scheme__title Коммерческое<br>предложение
 
-        +b.col._lg_3
-          .scheme__item.scheme__item_step_5(style="animation-delay: 2s").start-animate
-            .scheme__title Осуществление работ
-            .scheme__text Проводим необходимые работы по проектированию и монтажу
-      .scheme__progress-bar
-      .row
-        +b.col._lg_5
-          .scheme__item.scheme__item_step_2(style="animation-delay: .5s").start-animate
-            .scheme__title Бесплатное обследование объекта
-            .scheme__text Мы отправляем главного инженера на объект для выяснения подробностей
-        +b.col._lg_4
-          .scheme__item.scheme__item_step_4(style="animation-delay: 1.5s").start-animate
-            .scheme__title Предоставление документов
-            .scheme__text Вы предоставляете нам все необходимые документы
-        +b.col._lg_3
-          .scheme__item.scheme__item_step_6(style="animation-delay: 2.5s").start-animate
-            .scheme__title Получение лицевого счета
-            .scheme__text Гарантируем, что вы получите лицевой счет на газ
+            .scheme__text Мы формируем коммерческое предложение на основании заполненной справки и отправляем вам на согласование
+        +b.col._lg_3._md_3._sm_6._xs_12
+          .scheme__item
+            .scheme__n 4
+            .scheme__title Контракт
+            .scheme__text Предоставляем вам полный пакет документов и заключаем контракт
+        +b.col._lg_3._md_3._sm_6._xs_12
+          .scheme__item
+            .scheme__n 5
+            .scheme__title Изготовление<br>баланса
+            .scheme__text Занимает 1 рабочий день с момента предоставления информационной справки
+        +b.col._lg_3._md_3._sm_6._xs_12
+          .scheme__item
+            .scheme__n 6
+            .scheme__title Выдача<br>баланса
 
-    .scheme.scheme_mod_1
-      .row
-        +b.col._sm_6
-          .scheme__item.scheme__item_step_1
-            .scheme__title Заявка
-            .scheme__text Вы оставляете заявку или звоните нам по телефону
-            .btn.btn_style_small.order Оставить заявку
-        +b.col._sm_6
-          .scheme__item.scheme__item_step_2
-            .scheme__title Бесплатное обследование объекта
-            .scheme__text Мы отправляем главного инженера на объект для выяснения подробностей
-        +b.col._sm_6
-          .scheme__item.scheme__item_step_3
-            .scheme__title Заключение подрядного договора
-            .scheme__text Мы формируем коммерческое предложение и составляем договор подряда
-        +b.col._sm_6
-          .scheme__item.scheme__item_step_4
-            .scheme__title Предоставление документов
-            .scheme__text Вы предоставляете нам все необходимые документы
+            .scheme__text Происходит на основании подписанных актов выполненных работ и обмена подписанных документов
+        +b.col._lg_3._md_3._sm_6._xs_12
+          .scheme__item
+            .scheme__n 7
+            .scheme__title Оплата<br>по договору
+            .scheme__textИ только после того, как вы получили баланс на руки, вы оплачиваете выставленный счет
+        +b.col._lg_3._md_3._sm_6._xs_12
+          .scheme__item
+            .scheme__n 8
+            .scheme__title Гарантия
+            .scheme__text Мы даем гарантию, что Водоканал ваш баланс примет. Вы даете нам обратную связь, когда это произошло!
 
-        +b.col._sm_6
-          .scheme__item.scheme__item_step_5
-            .scheme__title Осуществление работ
-            .scheme__text Проводим необходимые работы по проектированию и монтажу
-        +b.col._sm_6
-          .scheme__item.scheme__item_step_6
-            .scheme__title Получение лицевого счета
-            .scheme__text Гарантируем, что вы получите лицевой счет на газ
   .questions
-    .questions__title У вас остались вопросы?
+    .questions__title Остались вопросы?
     | Задайте их нашему специалисту!
   .btn.order Получить бесплатную консультацию
   .map#map
@@ -459,7 +264,7 @@ body.page
           .footer__contact.footer__contact_type_mail order@bk-invent.ru
 
 
-  .modal#modal__callme
+  .modal#modal__product
     .modal__wrapper
         .modal__dialog
             .close.modal__close
@@ -468,16 +273,16 @@ body.page
               form.ajax
                 input(placeholder='Введите Ваше имя' name='name').input.input_type_name
                 input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
-                input(type='hidden', name='url', value='<?echo $url?>')
-                input(type='hidden', name='utm', value='<?echo $utm?>')
-                input(type='hidden', name='utm_term', value='<?echo $utm_term?>')
-                input(type='hidden', name='utm_campaign', value='<?echo $utm_campaign?>')
-                input(type='hidden', name='utm_source', value='<?echo $utm_source?>')
-                input(type='hidden', name='utm_medium', value='<?echo $utm_medium?>')
-                input(type='hidden', name='utm_content', value='<?echo $utm_content?>')
-                input(type='hidden', name='order', value='ВК под ключ. Консультация по документам')
-                input(type="hidden" name="order" value="ВК под ключ. Заказ звонка")
-                input(type='submit' value='Заказать звонок').form__btn
+                input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
+                input(type='hidden', name='url', value="<?echo $url?>")
+                input(type='hidden', name='utm', value="<?echo $utm?>")
+                input(type='hidden', name='utm_term', value="<?echo $utm_term?>")
+                input(type='hidden', name='utm_campaign', value="<?echo $utm_campaign?>")
+                input(type='hidden', name='utm_source', value="<?echo $utm_source?>")
+                input(type='hidden', name='utm_medium', value="<?echo $utm_medium?>")
+                input(type='hidden', name='utm_content', value="<?echo $utm_content?>")
+                input(type='hidden', name='order', value='Баланс водопотребления и водоотведения')#product-input
+                input(type='submit' value='Заказать').form__btn
 
   .modal#modal__order
     .modal__wrapper
@@ -489,15 +294,14 @@ body.page
                 input(placeholder='Введите Ваше имя' name='name').input.input_type_name
                 input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
                 input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
-                input(type='hidden', name='url', value='<?echo $url?>')
-                input(type='hidden', name='utm', value='<?echo $utm?>')
-                input(type='hidden', name='utm_term', value='<?echo $utm_term?>')
-                input(type='hidden', name='utm_campaign', value='<?echo $utm_campaign?>')
-                input(type='hidden', name='utm_source', value='<?echo $utm_source?>')
-                input(type='hidden', name='utm_medium', value='<?echo $utm_medium?>')
-                input(type='hidden', name='utm_content', value='<?echo $utm_content?>')
-                input(type='hidden', name='order', value='ВК под ключ. Консультация по документам')
-                input(type="hidden" name="order" value="ВК под ключ. Консультация")
+                input(type='hidden', name='url', value="<?echo $url?>")
+                input(type='hidden', name='utm', value="<?echo $utm?>")
+                input(type='hidden', name='utm_term', value="<?echo $utm_term?>")
+                input(type='hidden', name='utm_campaign', value="<?echo $utm_campaign?>")
+                input(type='hidden', name='utm_source', value="<?echo $utm_source?>")
+                input(type='hidden', name='utm_medium', value="<?echo $utm_medium?>")
+                input(type='hidden', name='utm_content', value="<?echo $utm_content?>")
+                input(type='hidden', name='order', value='Баланс водопотребления и водоотведения. Консультация')
                 input(type='submit' value='Отправить').form__btn
 
   .modal#modal__ok
@@ -505,13 +309,6 @@ body.page
         .modal__dialog
             .close.modal__close
             .modal__title <b>Ваша заявка принята</b> <br>Наш специалист свяжется с вами в течении 20 минут
-
-  .modal#modal__download
-    .modal__wrapper
-        .modal__dialog
-            .close.modal__close
-            .modal__title Документы можно скачать по ссылке
-            a(href="http://lp.bk-invent.ru/docs2.pdf" target="_blank").btn Скачать
 
   .modal.modal_type_zoom#modal__zoom
     .modal__wrapper
@@ -531,8 +328,8 @@ body.page
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    ym(51570953, "init", {
-    id:51570953,
+    ym(51637940, "init", {
+    id:51637940,
     clickmap:true,
     trackLinks:true,
     accurateTrackBounce:true,
@@ -540,4 +337,4 @@ body.page
     });
   noscript
     div
-      img(src='https://mc.yandex.ru/watch/51570953', style='position:absolute; left:-9999px;', alt='')
+      img(src='https://mc.yandex.ru/watch/51637940', style='position:absolute; left:-9999px;', alt='')

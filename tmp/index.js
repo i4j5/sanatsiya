@@ -25,15 +25,57 @@
 
 $(document).ready(function () {
 
-	var yatarget = 'order';
+	var now = new Date("December 31, 2018");
 
-	$('.callme').click(function (event) {
-		yatarget = 'callme';
-		$('#modal__callme').openModal();
+	var endTS = now.getTime();
+
+	setInterval(function () {
+		now = new Date();
+		var totalRemains = endTS - now.getTime();
+		if (totalRemains > 1) {
+			var RemainsSec = parseInt(totalRemains / 1000);
+			var RemainsFullDays = parseInt(RemainsSec / (24 * 60 * 60));
+			var secInLastDay = RemainsSec - RemainsFullDays * 24 * 3600;
+			var RemainsFullHours = parseInt(secInLastDay / 3600);
+			if (RemainsFullHours < 10) {
+				RemainsFullHours = "0" + RemainsFullHours;
+			};
+			var secInLastHour = secInLastDay - RemainsFullHours * 3600;
+			var RemainsMinutes = parseInt(secInLastHour / 60);
+			if (RemainsMinutes < 10) {
+				RemainsMinutes = "0" + RemainsMinutes;
+			};
+			var lastSec = secInLastHour - RemainsMinutes * 60;
+			if (lastSec < 10) {
+				lastSec = "0" + lastSec;
+			};
+			if (RemainsFullDays < 10) {
+				RemainsFullDays = "0" + RemainsFullDays;
+			};
+			var str = '<div class=\'timer__el\'><div class=\'timer__numeral\'>' + RemainsFullDays + '</div><div class=\'timer__text\'>\u0414\u043D\u0435\u0439</div></div>';
+			str = str + ('<div class=\'timer__el\'><div class=\'timer__numeral\'>' + RemainsFullHours + '</div><div class=\'timer__text\'>\u0427\u0430\u0441\u043E\u0432</div></div>');
+			str = str + ('<div class=\'timer__el\'><div class=\'timer__numeral\'>' + RemainsMinutes + '</div><div class=\'timer__text\'>\u041C\u0438\u043D\u0443\u0442\u044B</div></div>');
+			str = str + ('<div class=\'timer__el\'><div class=\'timer__numeral\'>' + lastSec + '</div><div class=\'timer__text\'>\u0421\u0435\u043A\u0443\u043D\u0434\u044B</div></div>');
+			$('.digits').html(str);
+
+			//$('.digits').html("<span>"+RemainsFullDays+"<div>Дней</div></span> <span>"+RemainsFullHours+"<div>Часов</div></span> <span>"+RemainsMinutes+"<div>Минуты</div></span> <span class='red'>"+lastSec+"<div>Секунды</div></span>");
+		} else {
+			$("#timer").remove();
+		}
+	}, 1000);
+
+	var yatarget = 'stock';
+
+	$('.product__btn').click(function (event) {
+		/// Баланс водопотребления и водоотведения
+		var product = $(this).data('product');
+		$('#product-input').val(product);
+		yatarget = 'order';
+		$('#modal__product').openModal();
 	});
 
 	$('.order').click(function (event) {
-		yatarget = 'order';
+		yatarget = 'advice';
 		$('#modal__order').openModal();
 	});
 
@@ -60,41 +102,6 @@ $(document).ready(function () {
 	$('.logos').waypoint(function () {
 		$('.logos img').addClass('animated zoomIn');
 	}, { offset: '90%' });
-
-	var $items = $('.tabs__item');
-	$items.each(function (index, el) {
-		var $el = $(el);
-		$el.children('.tabs__title').click(function (event) {
-			$el.toggleClass('tabs__item_active');
-
-			var $progressBar = $el.children('.tabs__text').children('.progress-bar');
-			var interest = $progressBar.data('interest');
-
-			if ($el.hasClass('tabs__item_active')) {
-				$progressBar.children('.progress-bar__pace').children('.progress-bar__interest').text('');
-				$progressBar.children('.progress-bar__pace').width('0%');
-				$el.children('.tabs__text').slideDown(500);
-				setTimeout(function () {
-					$progressBar.children('.progress-bar__pace').width(interest + '%');
-					var n = 0;
-					var timerId = setInterval(function () {
-						++n;
-						$progressBar.children('.progress-bar__pace').children('.progress-bar__interest').text(n + '%');
-						// $progressBar.children('.progress-bar__pace').width(n + '%')
-					}, 1000 / interest);
-
-					setTimeout(function () {
-						clearInterval(timerId);
-					}, 1000);
-				}, 500);
-			} else {
-				$el.children('.tabs__text').slideUp(500);
-				setTimeout(function () {
-					$progressBar.children('.progress-bar__pace').width('0%');
-				}, 500);
-			}
-		});
-	});
 
 	$('.ajax').each(function () {
 		$(this).validate({
@@ -129,8 +136,8 @@ $(document).ready(function () {
 					} else {
 						$('#modal__ok').openModal();
 					}
-					yaCounter51570953.reachGoal(yatarget);
-					yatarget = 'order';
+					yaCounter51637940.reachGoal(yatarget);
+					yatarget = 'stock';
 				}).always(function () {
 					//btn.val(btnText)
 					$('.loader_submit').removeClass('loader_active');
@@ -177,19 +184,6 @@ $(document).ready(function () {
 		map.geoObjects.add(placemark);
 	}
 });
-
-// $(document).ready(function(){
-//   $('.slider').bxSlider({
-//   	pager: true,
-//   	nextText: '',
-//   	prevText: '',
-//   	touchEnabled: false,
-//   	auto: true,
-//   	pause: 2800,
-//   	stopAutoOnClick: true,
-//   	autoHover: true
-//   });
-// });
 
 $(window).on('load', function (e) {
 	window.setTimeout(function () {

@@ -1,89 +1,9 @@
  @import "utilities/reset.styl"
  @import "mixins/flex-grid.styl"
  
- @font-face
-     font-family 'Neo Sans Pro'
-     src url('../fonts/NeoSansPro-Bold.eot')
-     src local('Neo Sans Pro Bold'), local('NeoSansPro-Bold'),
-        url('../fonts/NeoSansPro-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/NeoSansPro-Bold.woff') format('woff'),
-        url('../fonts/NeoSansPro-Bold.ttf') format('truetype')
-     font-weight bold
-     font-style normal
-
- @font-face
-     font-family 'Neo Sans Pro'
-     src url('../fonts/NeoSansPro-Medium.eot')
-     src local('Neo Sans Pro Medium'), local('NeoSansPro-Medium'),
-        url('../fonts/NeoSansPro-Medium.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/NeoSansPro-Medium.woff') format('woff'),
-        url('../fonts/NeoSansPro-Medium.ttf') format('truetype')
-     font-weight 500
-     font-style normal
-
- @font-face
-     font-family 'Neo Sans Pro'
-     src url('../fonts/NeoSansPro-LightItalic.eot')
-     src local('Neo Sans Pro Light Italic'), local('NeoSansPro-LightItalic'),
-        url('../fonts/NeoSansPro-LightItalic.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/NeoSansPro-LightItalic.woff') format('woff'),
-        url('../fonts/NeoSansPro-LightItalic.ttf') format('truetype')
-     font-weight 300
-     font-style italic
-
- @font-face
-     font-family 'Neo Sans Pro'
-     src url('../fonts/NeoSansPro-Regular.eot')
-     src local('Neo Sans Pro'), local('NeoSansPro-Regular'),
-        url('../fonts/NeoSansPro-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/NeoSansPro-Regular.woff') format('woff'),
-        url('../fonts/NeoSansPro-Regular.ttf') format('truetype')
-     font-weight normal
-     font-style normal
-
- @font-face
-     font-family 'Neo Sans Pro Ultra'
-     src url('../fonts/NeoSansPro-Ultra.eot')
-     src local('Neo Sans Pro Ultra'), local('NeoSansPro-Ultra'),
-        url('../fonts/NeoSansPro-Ultra.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/NeoSansPro-Ultra.woff') format('woff'),
-        url('../fonts/NeoSansPro-Ultra.ttf') format('truetype')
-     font-weight 900
-     font-style normal
-
- @font-face
-     font-family 'Neo Sans Pro'
-     src url('../fonts/NeoSansPro-BoldItalic.eot')
-     src local('Neo Sans Pro Bold Italic'), local('NeoSansPro-BoldItalic'),
-        url('../fonts/NeoSansPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/NeoSansPro-BoldItalic.woff') format('woff'),
-        url('../fonts/NeoSansPro-BoldItalic.ttf') format('truetype')
-     font-weight bold
-     font-style italic
-
- @font-face
-     font-family 'Neo Sans Pro'
-     src url('../fonts/NeoSansPro-Light.eot')
-     src local('Neo Sans Pro Light'), local('NeoSansPro-Light'),
-        url('../fonts/NeoSansPro-Light.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/NeoSansPro-Light.woff') format('woff'),
-        url('../fonts/NeoSansPro-Light.ttf') format('truetype')
-     font-weight 300
-     font-style normal
-
- @font-face
-     font-family 'Neo Sans Pro'
-     src url('../fonts/NeoSansPro-Italic.eot')
-     src local('Neo Sans Pro Italic'), local('NeoSansPro-Italic'),
-        url('../fonts/NeoSansPro-Italic.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/NeoSansPro-Italic.woff') format('woff'),
-        url('../fonts/NeoSansPro-Italic.ttf') format('truetype')
-     font-weight normal
-     font-style italic
-
 
 .page
-    font-family 'Neo Sans Pro'
+    font-family 'Open Sans', sans-serif
     background #fff
     font-weight normal
     font-style normal
@@ -159,116 +79,67 @@
     width 100%
     
 .top
-    background-color rgba(255, 255, 255, 1)
-    position absolute
+    background-color #fff
     width 100%
-    height 80px
-    box-shadow  0px 0px 10px 0px rgba(46, 43, 43, 0.63)
+    padding 20px 0
 
 .logo
     &__img
-        padding-top 5px
+        // padding-top 5px
         display inline-block
         float left
+        & img
+            width 100px
+        @media (min-width 500px)
+            & img
+                width auto
     &__text
-        font-size 14px
-        color #000003
-        text-transform uppercase
+        font-weight 300
+        font-size 15px
+        color #000
         line-height 1.357
         text-align left
-        padding 20px
-        display NONE
-        @media (min-width 650px)
+        padding 35px 0 0 40px
+        display none
+        @media (min-width 770px)
             display inline-block
   
 .phone-grup
     text-align right
     line-height 1
-    margin-top 15px
+    margin-top 10px
     display inline-block
-    @media (min-width 790px)
-        float left
+    //@media (min-width 790px)
+        //float left
     float right
+    font-weight 300
     &_footer
         text-align center
         margin-top 0
     &__phone
-        font-size 18px
-        color #302d36
-        font-weight 500
+        font-size 20px
+        color #000
+        font-weight 600
     &__text
-        margin-top 8px
-        font-size 11px
+        margin-top 10px
+        font-size 14px
         line-height 1.4em
-
-.callme
-    @media (min-width 790px)
-        display block
-    display none
-    user-select none
-    box-shadow 0px 2px 0px 0px #2e4693
-    height 33px
-    font-size 14px
-    color #fff
-    background #5472d2 linear-gradient(0deg, #5472d2, #5b7ce5)
-    background-image url('../img/callme__icon.png')
-    background-repeat no-repeat
-    background-position 5px center
-    border-radius 100px
-    text-align center
-    line-height 33px
-    float right
-    margin-top 20px
-    margin-left 50px
-    position relative
-    top 0
-    cursor pointer
-    transition all .1s linear
-    padding 0 20px 0 40px
-    &:active
-        top 2px
-        box-shadow 0px 0px 0px 0px #2e4693
+    &__email
+        margin-top 15px
+        font-size 16px
+        line-height 1.4em
 
 .header
     width 100%
     // padding 200px 0
     text-align center
-    box-shadow inset 0px 2px 18px 0px rgba(46, 43, 43, 0.63)
     
-    background-color #ddd
-    background-image  linear-gradient(110deg, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 78%, rgba(255, 255, 255, 0.5) 78%), linear-gradient(135deg, rgba(255,255,255,0.6278886554621849) 35%, rgba(255,255,255,0) 53%), url('../img/header-img.png'), url('../img/header-bg.jpg')
-    // background-position top right 10px, bottom left
-    background-repeat no-repeat, no-repeat, repeat, no-repeat
-    background-size auto, auto, auto, cover
-    background-attachment scroll, scroll , fixed , fixed
-    height auto
-    height 100vh
-    min-height 500px
-    // display fixed
-    display flex
-    justify-content center    
-    flex-direction column
+    background #63b1ff url('../img/header-img.png')no-repeat bottom right 15vw
+    padding 100px 0
 
 .offer
     text-align left !important
     position relative
-    &__items
-        @media (min-width 1000px)
-            margin-top 40px
-        margin-top 20px
-    &__item
-        background url('../img/ok.png') no-repeat center left
-        @media (min-width 1000px)
-            font-size 20px
-            line-height 1.4em
-            background-size 20px 
-            padding-left 30px
-        padding-left 20px
-        background-size 14px 
-        font-size 14px
-        line-height 1.2em
-        margin-bottom 10px
-        font-weight normal
     &__text
         // &:after
         //     content " "
@@ -284,66 +155,51 @@
         //     box-shadow 0px 0px 5px rgba(7, 7, 7, 0.7)
         @media (min-width 1000px)
             //margin-bottom 100px
-            font-size 45px
-        margin-bottom 80px
+            font-size 34px
+        margin-bottom 50px
         font-weight 500
-        font-size 19px
-        color #000
-        line-height 1.4
+        @media (min-width 640px)
+            font-size 30px
+        font-size 20px
+        color #fff
+        line-height 1.8em
+        font-weight 300
         //-shadow 0px 0px 10px rgba(7, 7, 7, 0.7)
-        width 100%
+        text-transform uppercase
+        //width 100%
         span
             color #e93935
     &__action
         @media (min-width 1000px)
-            font-size 18px
-        font-size 16px
+            font-size 16px
+        font-size 14px
         line-height 1.2em
-        padding 15px
-        border-radius 4px
+        padding 15px 30px
+        border-radius 100px
         //border 2px solid #fff
-        color #fff
+        color #000
         display inline-block
         text-align center
-        background-color #db4d4d 
-        background-image url('../img/offer__action.png'), linear-gradient(0deg, #db4d4d, #e05a5a)
-        background-repeat  no-repeat, no-repeat
-        background-position right 10px center, center
-        background-size 30px, auto
+        background-color #fff
         cursor pointer
         transition all .1s linear
         //box-shadow  0px 2px 18px 0px rgba(171, 7, 46, 0.42)
         position relative
-        padding-right 50px
         user-select none
-        top 0
-        &:before
-            @media (min-width 1000px)
-                display block
-            display none
-            content " " 
-            position absolute
-            right -150px
-            bottom 20px
-            background url('../img/main-arrow.png') no-repeat
-            width 115px
-            height 81px
-        &:hover
-            //box-shadow  0px 2px 22px 0px rgba(46, 43, 43, 0.63)
-        &:active
-            // background #db4d4d linear-gradient(0deg, #e05a5a, #db4d4d)
-            top 2px       
+        text-transform uppercase
+        @media (min-width 640px)
+            font-size 16
+        
     
 .btn
     user-select none
-    box-shadow 0px 3px 0px 0px #950b0b
-    height 40px
+    height 50px
     font-size 16px
     color #fff
-    background #db4d4d linear-gradient(0deg, #db4d4d, #e05a5a)
+    background #3e94eb
     border-radius 100px
     text-align center
-    line-height 40px
+    line-height 50px
     display inline-block
     position relative
     top 0
@@ -352,61 +208,99 @@
     padding 0 25px
     margin auto
     display table
-    &:active
-        top 3px
-        box-shadow 0px 0px 0px 0px #950b0b
-    &_style_blue
-        background #4273d6 linear-gradient(0deg, #4273d6, #477de9)
-        box-shadow 0px 3px 0px 0px #174497
-    &_style_small
-        font-size 12px !important
-        line-height 28px
-        height 28px
-        border-radius 4px
-        padding 0 15px
-        margin-bottom 10px
-        float left
+    // &:active
+    //     top 3px
+    //     box-shadow 0px 0px 0px 0px #950b0b
+    // &_style_blue
+    //     background #4273d6 linear-gradient(0deg, #4273d6, #477de9)
+    //     box-shadow 0px 3px 0px 0px #174497
+    // &_style_small
+    //     font-size 12px !important
+    //     line-height 28px
+    //     height 28px
+    //     border-radius 4px
+    //     padding 0 15px
+    //     margin-bottom 10px
+    //     float left
 
-//ЗАМЕР
-.froze
+//ТРИГЕРЫ
+.triggers
     width 100%
-    background #e2e2e2
-    padding 40px 0
-    &__container
-        display table
-        margin auto
-    &__action
-        @media (min-width 790px)
-            font-size 22px
-        font-size 19px
-        line-height 1.2em
+    text-align center
+    margin-bottom 60px
+    &__text
+        font-size 17px 
+        line-height 1.3em
         color #000
-        text-transform uppercase
-    &__description
-        margin-top 10px
-        @media (min-width 790px)
-            margin-bottom 40px
-            font-size 18px
-        margin-bottom 20px
-        font-size 14px
-        line-height 1.2em
-        color #000
-    & .input
-        @media (min-width 1015px)
-            width 310px
-            margin-right 20px
-        width 100%
-        margin-bottom 10px
-    & .form__btn
-        @media (min-width 1015px)
-            display inline-block !important
-            width auto
-        width 100%
+    &__img
+        margin 60px 0 10px
     
+.about
+    font-weight 300
+    font-size 15px
+    line-height 1.8em
+    text-align left
+    margin-top 60px 
+
+.textt
+    font-weight 300
+    font-size 16px
+    line-height 1.8em
+    background #fff url('../img/textt-bg.jpg') no-repeat center right
+    min-height 300px
+    margin-top 100px
+    &__title
+        padding-top 50px
+        font-size 20px
+        margin-bottom 10px
+        position relative
+        &:before
+            content ' '
+            width 100000px 
+            height 2px
+            position absolute
+            left -100040px
+            top 60px
+            background #868686
+
+.product
+    background #f1f1f1
+    padding 30px 15px
+    line-height 1.2em
+    text-align center
+    font-weight 300
+    margin-bottom 20px
+    &__title
+        font-size 20px
+        color #000
+        margin-bottom 20px
+    &__price
+        font-size 17px
+        color #e91a1a 
+        margin-bottom 10px
+        font-weight 500
+        &_old
+            color #000
+            font-weight 300
+            text-decoration line-through
+    &__btn
+        font-size 16px
+        background #3e94eb
+        color #fff
+        text-align center
+        padding 10px 30px
+        display inline-block
+        border-radius 100px
+        margin-top 15px
+        cursor pointer
+            
+            
+
+
 .input
     font-size 16px
     color #545454
-    border-radius 4px 
+    //border-radius 4px 
     border 1px solid #bcb8b8
     height 45px
     outline 0
@@ -434,515 +328,120 @@
         color #57ad21
 .form
     &__btn
-        font-size 16px
-        color #fff
-        border-radius 4px
-        background-color #fc4c4c
-        background-image linear-gradient( 0deg, #fc4c4c, #ff5959)
-        box-shadow 0px 3px 0px 0px #af0303
-        width auto
-        height 43px
-        line-height 43px
-        user-select none
-        text-align center
-        display block
-        position relative
-        top 0
         cursor pointer
         transition all .1s linear
-        padding 0 25px
-        &:active
-            top 3px
-            box-shadow 0px 0px 0px 0px #af0303
+        font-size 16px
+        line-height 1.2em
+        padding 15px 30px
+        border-radius 100px
+        //border 2px solid #fff
+        color #fff
+        display inline-block
+        text-align center
+        background-color #3e94eb
+        cursor pointer
+        transition all .1s linear
+        //box-shadow  0px 2px 18px 0px rgba(171, 7, 46, 0.42)
+        position relative
+        user-select none
+        text-transform uppercase
 
-//ТРИГЕРЫ
-.triggers
-    width 100%
-    background #fff url('../img/triggers-bg.jpg')
-    background-repeat no-repeat
-    background-size cover
-    background-attachment fixed
-    box-shadow inset 0px 1px 30px 0px rgba(63, 62, 62, 0.6)
-    padding 40px 0px 70px
-    text-align center
-    &__text
-        font-size 17px 
-        line-height 1.3em
-        color #000
-    &__img
-        margin 60px 0 10px
-        
+
 
 .title
-    position relative
-    margin 40px 0
-    &__wrap
-        &:before
-            @media (min-width 550px)
-                display block
-            display none
-            content " "
-            position absolute
-            width 100%
-            height 2px
-            background #706f6f
-            top calc(50% - 1px)
-            left 0
-    &__text
-        font-size 28px
-        line-height 1.2em
-        background #fff
-        padding 0 20px
-        text-align center
-        background #fff
-        margin auto
-        display table
-        position relative
-    &:before
-    &:after 
-        @media (min-width 550px)
-            display block
-        display none
-        content " "
-        position absolute
-        width 14px
-        height 14px
-        background #706f6f
-        border-radius 20px
-        top calc(50% - 7px)
-    &:before
-        left 0
-    &:after 
-        right 0
-         
+    text-align center
+    font-size 30px 
+    line-height 1.2em
+    color #000
+    font-weight 300
+    margin 35px 0 50px 0
 
-//ТАБЫ - Этапы подключения
-.tabs
-    max-width 690px
-    margin auto
-    ul, ol
-        padding-left 30px
-    &__item
-        margin-bottom 10px
-        &_active
-            .tabs__arrow
-                transform rotate(180deg) !important
-            .progress-bar __pace
-                transition none
-                //transition-delay 0.5s
-    &__title
-        color #fff
-        line-height 1.2em
-        font-size 16px
-        background #477be6
-        border-radius 5px
-        padding 10px 20px 10px 50px
-        position relative
-        cursor pointer
-        z-index 10
-    &__number
-        font-size 16px
-        text-align center
-        line-height 24px
-        color #e1e3ed
-        width 24px
-        height 24px
-        background #2b5ab3
-        border-radius 30px
-        position absolute
-        top calc(50% - 12px)
-        left 10px
-        transition all .5s linear
-    &__arrow
-        background url('../img/tabs__number.png') no-repeat center
-        height 13px
-        width 24px
-        position absolute
-        top calc(50% - 7px)
-        right 10px
-        transition all .5s linear
-    &__text
-        font-size 14px 
-        line-height 1.8em
-        color #282828
-        border-radius 5px
-        border 1px solid #e0e0e0
-        padding 20px 20px 15px 20px
-        position relative
-        top -10px
-        margin-bottom -10px
-        display none 
-        
 
-.progress-bar
-    width 100%
-    height 14px
-    box-shadow inset 0px 0px 5px 0px rgba(0, 0, 0, 0.35)
-    border-radius 20px
-    color #d1d1d1
-    margin-top 40px
-    position relative 
-    &__pace
-        width 0%
-        height 14px
-        border-radius 20px
-        position absolute
-        background-image linear-gradient( 0deg, rgb(71,125,233) 0%, rgb(66,115,214) 100%)
-        transition all 1s linear
-        // transition-delay 0.5s
-    &__interest
-        font-size 11px 
-        color #282828
-        line-height 1em
-        position absolute
-        right 0
-        top -20px
-
-// ДОКУМЕНИЫ
-.docs
-    margin-bottom 50px
-    &__title
-        font-size 18px
-        color #000
-        line-height 1.2em
-        text-align center
-        @media (min-width 1200px)
-            margin 40px 0
-        margin 0px 0 20px 0
-    &__list
-        max-width 560px
-        font-size 16px
-        line-height 1.4em
-        color #565656
-        margin auto
-        background url('../img/docs-bg.jpg') no-repeat center
-        background-size contain
-        //background-size 100%
-        padding-left 25px
-        &
-            li
-                margin-bottom 10px
-    
 .wall
     max-width 390px
-    background #d4d4d4
-    border-radius 4px
+    background #fff
+    border-radius 30px
+    border 3px solid #e2e2e2
     margin auto
-    @media (min-width 1200px)
-        padding 40px
-    padding 30px 20px 20px 20px
     display table
+    box-shadow 0px 2px 30px 0px rgba(207, 207, 207, 0.6)
+    padding 70px 60px
+    min-height 300px
+    position relative
     &__title
-        font-size 18px
-        line-height 1.4em
+        font-size 22px
+        line-height 1.5em
         text-align center
-        color #010101
-        @media (min-width 1200px)
-            margin-bottom 40px
-        margin-bottom 20px
+        color #000
+        font-weight 400
+        // @media (min-width 1200px)
+        //     margin-bottom 40px
+        // margin-bottom 20px
+        margin-bottom 30px
     & .input
         margin-bottom 10px
     & .form__btn
         width 100%
         margin-top 20px
-        background  url('../img/pdf.png') no-repeat right 10px center, linear-gradient( 0deg, #fc4c4c, #ff5959)
+        //background  url('../img/pdf.png') no-repeat right 10px center, linear-gradient( 0deg, #fc4c4c, #ff5959)
         margin-bottom 20px
-    &_docs
-        @media (min-width 1200px)
-            margin-top 15px
-        margin-top 20px
      
-.reviews
-    position relative
-    width 100%
-    background #fff url('../img/reviews-bg.jpg') no-repeat
-    background-size cover
-    padding 30px 0 40px 0
-    box-shadow inset 0px 2px 18px 0px rgba(0, 0, 0, 0.11)
-    margin 60px 0
-    & .zoom
-        height auto
-        display inline-block
-        margin 5px
-        img 
-            margin 0
-            width 200px
-            height 200px
-    & .col
-        padding-left 3px
-        padding-right 3px
-    &__title
-        font-size 28px 
-        line-height 1.2em
-        color #000
-        text-align center
-        margin-bottom 30px
-    &__name
-        font-size 17px 
-        line-height 1em
-        color #000
-        font-weight 500
-        margin-bottom 20px
-    &__text
-        font-size 14px
-        line-height 1.6em
-        color #1b1b1b
-    &__gallery
-        padding 10px
-    &__imgs
-        display flex
-        justify-content center
-        flex-direction row
-        .reviews__img:nth-last-child(1)
-             margin-right 0px
-    &__img
-        // max-width 465px
-        width 100%
-        //float left
-        line-height 0
-        margin-top 5px 
-        &_size_small
-            // width 33%
-            // max-width 154px
-            margin-right 5px
-            margin-top 5px 
-        img
-            width 100%
-            
-//slider
-// .bx-pager
-//     text-align center
-//     position relative 
-//     bottom -30px
-// .bx-pager-item
-//     display inline-block
-// .bx-pager-link
-//     border 2px solid #929292
-//     width 18px 
-//     height 18px
-//     border-radius 20px
-//     font-size 0
-//     line-height 0
-//     display block
-//     background #fff
-//     &.active
-//         background #929292
-//     float left
-//     margin 10px
-// .bx-prev    
-// .bx-next
-//     display none
-//     @media (min-width 1080px)
-//         display block
-//     width 40px
-//     height 76px
-//     position absolute
-//     top calc(50% - 38px)
 
-// .bx-prev
-//     background url('../img/bx-prev.png')   
-//     left -80px 
-// .bx-next
-//     background url('../img/bx-next.png')
-//     right -80px
-    
-.logos
-    //@media (min-width 770px)
-    display flex
-    //display none
-    justify-content center
-    flex-direction column
-    @media (min-width 810px)
-        margin 20px 0 60px 0
-    margin -20px 0 40px 0
-    text-align center
-    img
-        width calc(100vh / 8)
-        height calc(100vh / 8)
-        margin 10px
-        @media (min-width 810px)
-            width 150px
-            height 150px
-            margin 40px
-    &__grup
-        //display flex
-        //justify-content  space-between
-        width 100%
-        //flex-direction row
-        // img
-        //     box-flex 1
-        //     flex 1 1 auto
-            
 .start-animate
     opacity 0
 .finish-animate
     opacity 1
 
-.scheme
-    margin 60px 0
-    display none
-    @media (min-width 1200px)
-        display block
+.scheme 
+    font-weight 300
+    color #000
+    background #f8f8f8
+    padding 20px 0 30px 0
+    margin-top 50px
     &__item
-        // transition all 5s linear
-        border-radius 10px 
-        border 3px solid #d3dfe0
-        padding 20px 30px
-        display table
+        min-height 210px
+        background #fff
+        padding 30px 25px
         position relative
-        min-height 160px
-        &::after
-            content " "
-            position absolute
-            display block
-            width 30px
-            height 30px
-            border-right 3px solid #d3dfe0
-            border-bottom 3px solid #d3dfe0
-            transform rotate(45deg)
-            bottom -17px
-            left calc(50% - 15px)
-            background #fff
-        &::before
-            font-size 16px
-            line-height 40px
-            width 40px
-            height 40px
-            background linear-gradient( 0deg, rgb(66,115,214) 0%, rgb(71,125,233) 100%)
-            border-radius 100%
-            border 6px solid #fff
-            content " "
-            position absolute
-            bottom -70px
-            left calc(50% - 20px)
-            text-align center
-            line-height 28px
-            color #fff
-            font-weight 500
-
-        &_step
-            &_1
-                max-width 225px
-                &::before
-                    content "1"
-            &_2
-                max-width 320px
-                margin auto
-                &::before
-                    content "2"
-            &_3
-                max-width 320px
-                margin auto
-                &::before
-                    content "3"
-            &_4
-                margin auto
-                max-width 290px
-                &::before
-                    content "4"
-            &_5
-                max-width 245px
-                &::before
-                    content "5"
-            &_6
-                max-width 260px
-                float right
-                &::before
-                    content "6"
-            &_2
-            &_4
-            &_6
-                padding-top 25px
-                min-height 140px
-                &::after
-                    bottom 0
-                    top -17px
-                    transform rotate(-135deg)
-                &::before
-                    bottom 0px
-                    top -70px
-    &_mod_1
-        
-        .scheme__title
-            padding 6px 12px
-        display block  
-        @media (min-width 1200px)
-            display none
-        & .scheme__item_step
-            &_1
-            &_2
-            &_3
-            &_4
-            &_5
-            &_6
-                float none !important
-                width 100%
-                max-width none
-                padding 10px
-                padding-top 20px
-                padding-bottom 20px
-                min-height 150px
-                margin-bottom 20px 
-                &::after
-                    display none !important
-                &::before
-                    // border 0px
-                    // width 28px
-                    // height 28px
-                    top -18px
-                    right 0
-                    left calc(100% - 28px) !important
-                    bottom calc(100%) !important
-            &_1
-                &::before
-                    content "1"
-            &_2
-                &::before
-                    content "2"
-            &_3
-                &::before
-                    content "3"
-            &_4
-                &::before
-                    content "4"
-            &_5
-                &::before
-                    content "5"
-            &_6
-                &::before
-                    content "6"
+        margin-bottom 20px
     &__title
-        font-size 14px 
-        color #fff
-        line-height 1em
-        background rgb(66,115,214) linear-gradient( 0deg, rgb(66,115,214) 0%, rgb(71,125,233) 100%);
-        padding 4px 8px 
-        display inline-block
-        border-radius 40px
-        margin-bottom 10px
+        font-size 20px 
+        line-height 1.3em
+        margin-bottom 20px
+        text-transform uppercase
+        z-index 100
+        position relative 
     &__text
-        font-size 12px
+        font-size 14px
         line-height 1.4em
         color #454545
-        margin-bottom 10px
-    // &__number
-    &__progress-bar
-        background linear-gradient( 90deg, rgba(210,223,224,0.25098) 0%, rgba(71,123,231,0.25) 0%, rgb(72,124,233) 100%);
-        height 16px
-        width 100%
-        border-radius 20px
-        margin 40px 0
+        //margin-bottom 20px
+        z-index 100 
+        position relative
+    &__n
+        font-size 180px
+        font-weight 400
+        color #e8e8e8
+        position absolute
+        z-index 50
+        top 0px
+        right 0px
+        line-height 1
+        font-style italic
+        
         
 .questions
-    font-size 16px 
+    font-size 18px 
     color #000
     line-height 1.2em
     text-align center
     margin-bottom 40px
     margin-top 100px
+    font-weight 300
     &__title
-        font-size 25px
-        padding-bottom 15px
+        font-size 30px
+        padding-bottom 25px
+        text-transform uppercase
         
 .map
     margin-top 80px
@@ -1050,10 +549,12 @@
         max-width 400px
         min-width 300px
         position relative
-        background #d4d4d4
-        border-radius 4px
-        padding 40px 30px
+        background #fff
         height auto
+        border-radius 30px
+        border 3px solid #ebebeb
+        //box-shadow 0px 2px 30px 0px rgba(207, 207, 207, 0.6)
+        padding 70px 60px
         & 
             .input
                 margin-bottom 15px
@@ -1072,21 +573,23 @@
             min-width 300px
             padding 40px 20px 20px 20px
             line-height 0
+            border-radius 4px
             margin 20px auto
+            padding 60px 20px 20px 20px
                         
     &__title
-        font-size 18px
+        font-size 20px
         line-height 1.7em
         text-align center
         color #010101
-        margin-bottom 20px
+        margin-bottom 30px
         margin-top 10px
 
     &__close
         cursor pointer
         position absolute
-        right 10px
-        top 10px
+        right 15px
+        top 15px
         display inline-block
         z-index 1050 
         
@@ -1101,3 +604,54 @@
 
 .modal-open
     overflow hidden
+    
+
+.stock
+    width 100%
+    background #f5f4f4 url('../img/stock-bg.jpg')
+    padding 50px 0px
+    margin-top 100px
+    box-shadow inset 0px 0px 32px 0px rgba(103, 103, 103, 0.22)
+    font-weight 300
+    line-height 1.5em
+    span
+        font-weight 500
+    &__title
+        font-size 30px
+        margin-bottom 20px
+        @media (min-width 990px)
+            margin-top 100px
+    &__text
+        font-size 18px
+        
+.timer
+    margin-bottom 40px 
+    @media (min-width 990px)
+        margin-bottom 0 
+    &__action
+        font-size 16px
+        line-height 1.2em
+        margin 40px 0 20px 0
+    &__el
+        display inline-block
+        width 74px
+        margin-right 15px 
+    &__numeral
+        border 2px solid rgb(66, 115, 214)
+        border-radius 50%
+        positio: absolute
+        width 74px
+        height 74px
+        line-height 70px
+        font-size 45px
+        text-align center
+        font-weight 300
+        display inline-block
+    &__text
+        margin-top 10px
+        font-size 16px
+        line-height 1em
+        text-align center
+        
+#doc
+    margin-bottom 80px
