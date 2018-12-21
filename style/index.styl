@@ -250,10 +250,14 @@
         background #fff url('../img/textt-bg.jpg') no-repeat center right
     min-height 300px
     margin-top 100px
+    &__text
+        max-width 700px
+        p
+            margin-bottom 15px
     &__title
         padding-top 50px
-        font-size 20px
-        margin-bottom 10px
+        font-size 22px
+        margin-bottom 15px
         position relative
         &:before
             content ' '
@@ -372,11 +376,16 @@
     min-height 300px
     position relative
     &__title
-        font-size 22px
+        font-size 18px
         line-height 1.5em
         text-align center
         color #000
-        font-weight 400
+        font-weight 300
+        span
+            font-size 25px
+            font-weight 400
+            margin-bottom 10px
+            display inline-block
         // @media (min-width 1200px)
         //     margin-bottom 40px
         // margin-bottom 20px
@@ -628,9 +637,10 @@
             margin-top 100px
     &__text
         font-size 18px
+        line-height 1.8em
         
 .timer
-    margin-bottom 40px 
+    margin-bottom 35px 
     @media (min-width 990px)
         margin-bottom 0 
     &__action
@@ -670,3 +680,41 @@
         
 #doc
     margin-bottom 80px
+    
+.info
+    font-weight 300
+    max-width 750px
+    margin 100px auto 70px auto
+    background url('../img/info-bg.png') no-repeat bottom center
+    background-size contain
+    padding 0 20px 30px 20px
+    position relative
+    &__title
+        font-size 20px 
+        line-height 1.4em
+        color #000
+        margin-bottom 20px
+    &__text
+        font-size 16px
+        color #0f0f0f
+        line-height 1.5em
+        p
+            margin-bottom 15px
+            position relative
+            padding-left 10px
+            &:before
+                content '-'
+                display block
+                width 10px
+                height 10px
+                position absolute
+                left -5px
+                 
+    &__icon
+        display block
+        width 44px 
+        height 44px
+        background url('../img/info-icon.png') no-repeat center
+        position absolute
+        left -50px
+        top 5px

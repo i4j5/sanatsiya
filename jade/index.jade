@@ -36,7 +36,7 @@ html(lang="ru")
 head
   meta(charset="UTF-8")
   meta(name="viewport" content="width=device-width, initial-scale=1")
-  title Баланс водопотребления и водоотведения от 1000 руб 
+  title Паспорт водного хозяйства
 
   link(rel="icon" href="img/favicon.ico" type="image/x-icon")
   link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
@@ -78,7 +78,7 @@ body.page
     .container
       .offer 
         .offer__text.start-animate
-          |Баланс водопотребления и водоотведения <br>от 1000 руб
+          |Рассчитаем паспорт водного хозяйства<br>для предприятий и заводов
         .offer__action.order.start-animate(style="animation-delay: .2s") Записаться на консультацию 
 
 
@@ -91,25 +91,21 @@ body.page
           .triggers__text Опыт работы<br>более 6 лет
         +b.col._lg_2._md_2._sm_6._xs_12
           .triggers__items
-          img(src='img/triggers__img5.png').triggers__img
-          .triggers__text Имеем право участия<br>в конкурсах, СРО
+          img(src='img/triggers__img7.png').triggers__img
+          .triggers__text Имеем право участия<br> в конкурсах, СРО
         +b.col._lg_3._md_3._sm_6._xs_12
           .triggers__items
-          img(src='img/triggers__img4.png').triggers__img
-          .triggers__text Изготовление балансов<br>от 2-х часов!
+          img(src='img/triggers__img5.png').triggers__img
+          .triggers__text Гарантируем принятия<br>паспорта Водоканалом! 
         +b.col._lg_4._lg-offset_1._md_4._sm_12._xs_12
           .about ООО «БК Инвент» — общество профессионалов, использующих в своей практике инновационный подход к решению как проектных, так и инженерно-строительных задач.
 
   +b.textt
     .container
-      +e.title Для чего он требуется?
-      |- Объект только планируется к подключению водоснабжения и/или водоотведения.
-      br
-      |- Объект поменял свой статус – жилое на нежилое, поменялся вид деятельности и т.д.
-      br
-      |- В случае перезаключения договора между собственником объекта и Водоканалом.
-      br
-      |- По истечению срока годности баланса (не более 5 лет).
+      +e.title Что такое паспорт водного хозяйства? 
+      +e.text 
+        p Паспорт водного хозяйства — это один из основных нормативно-технических документов компании, позволяющий осуществлять учет количества и состава производственных сбросов в систему канализации. В нем содержатся данные о том, к аким образом предприятие использует находящиеся в его распоряжении водные ресурсы, а также определяется степень воздействия деятельности компании на окружающую среду.
+        p Срок действия документа — 5 лет
 
 
   .stock
@@ -120,7 +116,10 @@ body.page
           .stock__title
             span Внимание 
             | акция!
-          .stock__text Только до <span>31</span> декабря <span> СКИДКА 15%</span>
+          .stock__text 
+            |Оставьте заявку <span>СЕГОДНЯ</span> и получите
+            br
+            |разовый <span>БЕСПЛАТНЫЙ</span> выезд инженера
           +b.timer
             #timer
               +e.action До конца акции осталось:
@@ -136,7 +135,13 @@ body.page
             //-   +e.text минут
         +b.col._lg_5._md_6._sm_12._xs_12
           .wall
-            .wall__title Заполните форму,чтобы<br>получить скидку 15%
+            .wall__title
+              span Заполните форму,
+              br
+              |чтобы получить бесплатную
+              br
+              |консультацию специалиста
+
             .form
               form.ajax
                 input(placeholder='Введите Ваше имя' name='name').input.input_type_name
@@ -148,8 +153,23 @@ body.page
                 input(type='hidden', name='utm_source', value="<?echo $utm_source?>")
                 input(type='hidden', name='utm_medium', value="<?echo $utm_medium?>")
                 input(type='hidden', name='utm_content', value="<?echo $utm_content?>")
-                input(type='hidden', name='order', value='Баланс водопотребления и водоотведения. Cкидка 15%')
+                input(type='hidden', name='order', value='Паспорт водного хозяйства. Выезд инженера')
                 input(type='submit' value='Отправить').form__btn
+
+  
+  +b.info
+    +e.icon
+    +e.title В паспорте водного хозяйства, или сокращенно, ПВХ, содержатся следующие данные:
+    +e.text
+      p Количественные показатели: какой объем воды компания тратит на производственные нужды, а также для удовлетворения бытовых и хозяйственных потребностей
+      p Количество потерь, аварийных или вследствие инфильтрации
+      p Масса производственных сбросов
+      p Характеристики сточных вод: их химический состав, степень токсичности, температура. Данный раздел заполняется аналогичным образом и в отношении водоприемника
+      p Источники водоснабжения и производственных стоков
+
+
+
+
 
   .container
     +b.title Допуски СРО
@@ -171,33 +191,7 @@ body.page
             img(src="img/doc4.jpg")
             +e.icon
 
-  .container
-    .row
-      +b.col._lg_3._md_3._sm_6._xs_12
-        +b.product
-          +e.title Частные строения ИЖС
-          +e.price._old От 1 300 руб.
-          +e.price От 1 100 руб.
-          +e.btn(data-product="Баланс водопотребления и водоотведения. Частные строения ИЖС") Заказать баланс
-      +b.col._lg_3._md_3._sm_6._xs_12
-        +b.product
-          +e.title Коммерческие объекты
-          +e.price._old От 2 100 руб.
-          +e.price От 1 780 руб.
-          +e.btn(data-product="Баланс водопотребления и водоотведения. Коммерческие объекты") Заказать баланс
-      +b.col._lg_3._md_3._sm_6._xs_12
-        +b.product
-          +e.title Муниципальные объекты
-          +e.price._old От 5 000 руб.
-          +e.price От 4 250 руб.
-          +e.btn(data-product="Баланс водопотребления и водоотведения. Муниципальные объекты") Заказать баланс
-      +b.col._lg_3._md_3._sm_6._xs_12
-        +b.product
-          +e.title Промышленные объекты
-          +e.price._old От 11 00 руб.
-          +e.price От 9 350 руб.
-          +e.btn(data-product="Баланс водопотребления и водоотведения. Промышленные объекты") Заказать баланс
-
+ 
   .scheme
     .container
       .title Как мы работаем
@@ -210,8 +204,8 @@ body.page
         +b.col._lg_3._md_3._sm_6._xs_12
           .scheme__item
             .scheme__n 2
-            .scheme__title Информационная<br>справка
-            .scheme__text Мы отправляем вам информационную справку, вы ее заполняете и отправляете обратно нам.
+            .scheme__titleОбследование<br>объекта
+            .scheme__text На объект выезжает наш инженер для подробного обследования и уточнения всех необходимых нюансов.
         +b.col._lg_3._md_3._sm_6._xs_12
           .scheme__item
             .scheme__n 3
@@ -226,24 +220,24 @@ body.page
         +b.col._lg_3._md_3._sm_6._xs_12
           .scheme__item
             .scheme__n 5
-            .scheme__title Изготовление<br>баланса
-            .scheme__text Занимает 1 рабочий день с момента предоставления информационной справки
+            .scheme__title Изготовление<br>паспорта
+            .scheme__text Занимает 5 рабочих дней с момента предоставления информационной справки
         +b.col._lg_3._md_3._sm_6._xs_12
           .scheme__item
             .scheme__n 6
-            .scheme__title Выдача<br>баланса
+            .scheme__title Выдача<br>паспорта
 
             .scheme__text Происходит на основании подписанных актов выполненных работ и обмена подписанных документов
         +b.col._lg_3._md_3._sm_6._xs_12
           .scheme__item
             .scheme__n 7
             .scheme__title Оплата<br>по договору
-            .scheme__textИ только после того, как вы получили баланс на руки, вы оплачиваете выставленный счет
+            .scheme__textИ И только после того, как вы получили паспорт на руки, вы оплачиваете выставленный счет
         +b.col._lg_3._md_3._sm_6._xs_12
           .scheme__item
             .scheme__n 8
             .scheme__title Гарантия
-            .scheme__text Мы даем гарантию, что Водоканал ваш баланс примет. Вы даете нам обратную связь, когда это произошло!
+            .scheme__text Мы даем гарантию, что Водоканал примет паспорт. Вы даете нам обратную связь, когда это произошло!
 
   .questions
     .questions__title Остались вопросы?
@@ -263,27 +257,6 @@ body.page
         +b.col_sm_4
           .footer__contact.footer__contact_type_mail order@bk-invent.ru
 
-
-  .modal#modal__product
-    .modal__wrapper
-        .modal__dialog
-            .close.modal__close
-            .modal__title Наши менеджеры свяжутся с Вами в ближайшее время
-            +b.form
-              form.ajax
-                input(placeholder='Введите Ваше имя' name='name').input.input_type_name
-                input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
-                input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
-                input(type='hidden', name='url', value="<?echo $url?>")
-                input(type='hidden', name='utm', value="<?echo $utm?>")
-                input(type='hidden', name='utm_term', value="<?echo $utm_term?>")
-                input(type='hidden', name='utm_campaign', value="<?echo $utm_campaign?>")
-                input(type='hidden', name='utm_source', value="<?echo $utm_source?>")
-                input(type='hidden', name='utm_medium', value="<?echo $utm_medium?>")
-                input(type='hidden', name='utm_content', value="<?echo $utm_content?>")
-                input(type='hidden', name='order', value='Баланс водопотребления и водоотведения')#product-input
-                input(type='submit' value='Заказать').form__btn
-
   .modal#modal__order
     .modal__wrapper
         .modal__dialog
@@ -301,7 +274,7 @@ body.page
                 input(type='hidden', name='utm_source', value="<?echo $utm_source?>")
                 input(type='hidden', name='utm_medium', value="<?echo $utm_medium?>")
                 input(type='hidden', name='utm_content', value="<?echo $utm_content?>")
-                input(type='hidden', name='order', value='Баланс водопотребления и водоотведения. Консультация')
+                input(type='hidden', name='order', value='Паспорт водного хозяйства. Консультация')
                 input(type='submit' value='Отправить').form__btn
 
   .modal#modal__ok
@@ -328,13 +301,14 @@ body.page
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    ym(51637940, "init", {
-    id:51637940,
+    ym(51663104, "init", {
+    id:51663104,
     clickmap:true,
     trackLinks:true,
     accurateTrackBounce:true,
     webvisor:true
     });
   noscript
-    div
-      img(src='https://mc.yandex.ru/watch/51637940', style='position:absolute; left:-9999px;', alt='')
+  div
+    img(src='https://mc.yandex.ru/watch/51663104', style='position:absolute; left:-9999px;', alt='')
+
