@@ -63,18 +63,15 @@ $(document).ready(function () {
 		}
 	}, 1000);
 
-	var yatarget = 'order';
+	var yatarget = 'stock';
 
-	$('.product__btn').click(function (event) {
-		/// Баланс водопотребления и водоотведения
-		var product = $(this).data('product');
-		$('#product-input').val(product);
-		//yatarget = 'order'
+	$('#offer').click(function (event) {
+		yatarget = 'cost';
 		$('#modal__product').openModal();
 	});
 
 	$('.order').click(function (event) {
-		//yatarget = 'advice'
+		yatarget = 'advice';
 		$('#modal__order').openModal();
 	});
 
@@ -135,8 +132,8 @@ $(document).ready(function () {
 					} else {
 						$('#modal__ok').openModal();
 					}
-					yaCounter51663104.reachGoal(yatarget);
-					yatarget = 'order';
+					yaCounter51690836.reachGoal(yatarget);
+					yatarget = 'stock';
 				}).always(function () {
 					//btn.val(btnText)
 					$('.loader_submit').removeClass('loader_active');
