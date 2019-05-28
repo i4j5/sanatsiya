@@ -112,6 +112,9 @@ $(document).ready(function () {
 				var form = $(form),
 				    str = form.serialize();
 
+				var roistat = window.roistat.visit || null;
+				str = str + '&roistat=' + roistat;
+
 				var btn = form.children("[type='submit']");
 				//let btnText = btn.val()
 				//btn.val('Обработка...')
@@ -120,7 +123,7 @@ $(document).ready(function () {
 				var download = form.children("[name='download']").val();
 
 				$.ajax({
-					url: 'http://lp.bk-invent.ru/send.php',
+					url: '//lp.bk-invent.ru/send.php',
 					type: 'post',
 					data: str
 				}).done(function () {
@@ -134,6 +137,7 @@ $(document).ready(function () {
 					}
 					yaCounter51690836.reachGoal(yatarget);
 					yatarget = 'stock';
+					yaCounter53737453.reachGoal('site');
 				}).always(function () {
 					//btn.val(btnText)
 					$('.loader_submit').removeClass('loader_active');
