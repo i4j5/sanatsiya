@@ -92,26 +92,68 @@ $utm =  $_SERVER["QUERY_STRING"];
       </div>
     </div>
   </div>
+  <div class="formm">
+    <div class="container">
+      <div class="formm__title">Записаться на бесплатный выезд инженера-проектировщика
+      </div>
+      <div class="form">
+        <form class="ajax">
+          <input placeholder="Введите Ваше имя" name="name" class="input input_type_name"/>
+          <input placeholder="Введите Ваш телефон" name="phone" class="input input_type_phone"/>
+          <input placeholder="Введите Ваш E-mail" name="email" class="input input_type_email"/>
+          <input type="hidden" name="url" value="&lt;?echo $url?&gt;"/>
+          <input type="hidden" name="utm" value="&lt;?echo $utm?&gt;"/>
+          <input type="hidden" name="utm_term" value="&lt;?echo $utm_term?&gt;"/>
+          <input type="hidden" name="utm_campaign" value="&lt;?echo $utm_campaign?&gt;"/>
+          <input type="hidden" name="utm_source" value="&lt;?echo $utm_source?&gt;"/>
+          <input type="hidden" name="utm_medium" value="&lt;?echo $utm_medium?&gt;"/>
+          <input type="hidden" name="utm_content" value="&lt;?echo $utm_content?&gt;"/>
+          <input type="hidden" name="order" value="Санация трубопровода. Выезд инженера"/>
+          <input type="submit" value="Отправить" class="form__btn"/>
+        </form>
+      </div>
+    </div>
+  </div>
   <div class="container">
     <div class="triggers">
       <div class="row">
-        <div class="col col_lg_2 col_md_2 col_sm_6 col_xs_12">
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
           <div class="triggers__items"></div><img src="img/triggers__img1.png" class="triggers__img"/>
           <div class="triggers__text">Опыт работы<br>более 6 лет</div>
         </div>
-        <div class="col col_lg_2 col_md_2 col_sm_6 col_xs_12">
-          <div class="triggers__items"></div><img src="img/triggers__img7.png" class="triggers__img"/>
-          <div class="triggers__text">Имеем право участия<br> в конкурсах, СРО</div>
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+          <div class="triggers__items"></div><img src="img/triggers__img6.png" class="triggers__img"/>
+          <div class="triggers__text">Цены ниже<br>среднерыночных<br>на 7-12%</div>
         </div>
         <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
-          <div class="triggers__items"></div><img src="img/triggers__img2.png" class="triggers__img"/>
-          <div class="triggers__text">Бесплатные<br>консультации </div>
+          <div class="triggers__items"></div><img src="img/triggers__img5.png" class="triggers__img"/>
+          <div class="triggers__text">Применяем<br>сертифицированные<br>материалы</div>
         </div>
-        <div class="col col_lg_4 col_lg-offset_1 col_md_4 col_sm_12 col_xs_12">
-          <div class="about">ООО «БК Инвент» — общество профессионалов, использующих в своей практике инновационный подход к решению как проектных, так и инженерно-строительных задач.</div>
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+          <div class="triggers__items"></div><img src="img/triggers__img10.png" class="triggers__img"/>
+          <div class="triggers__text">Cанация диаметром<br>от 25мм до 900 мм</div>
+        </div>
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+          <div class="triggers__items"></div><img src="img/triggers__img12.png" class="triggers__img"/>
+          <div class="triggers__text">Без выхода на поверхность<br>до 300 м</div>
+        </div>
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+          <div class="triggers__items"></div><img src="img/triggers__img3.png" class="triggers__img"/>
+          <div class="triggers__text">Возможность прокола<br>из колодца в колодец</div>
+        </div>
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+          <div class="triggers__items"></div><img src="img/triggers__img11.png" class="triggers__img"/>
+          <div class="triggers__text">Используем технику <br>с разными возможностями</div>
+        </div>
+        <div class="col col_lg_3 col_md_3 col_sm_6 col_xs_12">
+          <div class="triggers__items"></div><img src="img/triggers__img4.png" class="triggers__img"/>
+          <div class="triggers__text">Предоставляем всю документацию, согласно НОССТРОЙ</div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="ttext">
+    <div class="container">Санация трубопровода - это бестраншейный метод ремонта трубопровода разного диаметра. Существуют два основных способа санации трубопровода : релайнинг (“труба в трубе”), этот принцип применим в тех случаях, когда вводимая труба ниже диаметром, чем ремонтируемая, и способна пройти внутри нее. И второй способ - реновация - она подразумевает разрушение старой трубы режущими приборами и очищение траншеи, по которой проходит новая заменяемая труба</div>
   </div>
   <div class="textt">
     <div class="container">
@@ -165,21 +207,31 @@ $utm =  $_SERVER["QUERY_STRING"];
     </div>
   </div>
   <div class="info">
-    <div class="info__icon">
-    </div>
-    <div class="info__title">Подготовительный этап
-    </div>
-    <div class="info__text">
-      <p>Остановка системы (стока вод) по ремонтируемой ветке</p>
-      <p>Диагностика трубы методом телеинспектирования, которая позволяет оценить и выявить ее состояние</p>
-      <p>Промывка трубы, очистка от мусора и налета</p>
-    </div>
-    <div class="info__title">Основной этап
-    </div>
-    <div class="info__text">
-      <p>Подготовка приямка</p>
-      <p>Установка оборудования</p>
-      <p>Проведение санации трубопровода</p>
+    <div class="container">
+      <div class="row">
+        <div class="col col_lg_5 col_md_5 col_sm_12 col_xs_12">
+          <div class="info__box">
+            <div class="info__title">Подготовительный этап</div>
+            <div class="info__text">
+              <p>Остановка системы (стока вод) по ремонтируемой ветке</p>
+              <p>Диагностика трубы методом телеинспектирования, которая позволяет оценить и выявить ее состояние</p>
+              <p>Промывка трубы, очистка от мусора и налета</p>
+            </div>
+          </div>
+        </div>
+        <div class="col col_lg_2 col_md_2 col_sm_12 col_xs_12 info__flex"><img src="img/info__arrow.png" class="info__arrow"/>
+        </div>
+        <div class="col col_lg_5 col_md_5 col_sm_12 col_xs_12">
+          <div class="info__box">
+            <div class="info__title">Основной этап</div>
+            <div class="info__text">
+              <p>Подготовка приямка</p>
+              <p>Установка оборудования</p>
+              <p>Проведение санации трубопровода</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="container">
@@ -207,6 +259,99 @@ $utm =  $_SERVER["QUERY_STRING"];
       <div class="col col_xs_6 col_sm_3">
         <div data-img="doc4_big.jpg" class="zoom"><img src="img/doc4.jpg"/>
           <div class="zoom__icon">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="title">
+      <div class="title__wrap">
+        <div class="title__text">Cхема работы
+        </div>
+      </div>
+    </div>
+    <div id="scheme" class="scheme">
+      <div class="row">
+        <div class="col col col_lg_3">
+          <div class="scheme__item scheme__item_step_1 start-animate">
+            <div class="scheme__title">Заявка</div>
+            <div class="scheme__text">Вы оставляете заявку или звоните нам по телефону</div>
+            <div class="scheme__btn btn order">Оставить заявку</div>
+          </div>
+        </div>
+        <div class="col col_lg_5">
+          <div style="animation-delay: 1s" class="scheme__item scheme__item_step_3 start-animate">
+            <div class="scheme__title">Заключение подрядного договора</div>
+            <div class="scheme__text">Мы формируем коммерческое предложение и составляем договор подряда</div>
+          </div>
+        </div>
+        <div class="col col_lg_3">
+          <div style="animation-delay: 2s" class="scheme__item scheme__item_step_5 start-animate">
+            <div class="scheme__title">Осуществление работ</div>
+            <div class="scheme__text">Проводим необходимые работы по проектированию и монтажу</div>
+          </div>
+        </div>
+      </div>
+      <div class="scheme__progress-bar"></div>
+      <div class="row">
+        <div class="col col_lg_5">
+          <div style="animation-delay: .5s" class="scheme__item scheme__item_step_2 start-animate">
+            <div class="scheme__title">Бесплатное обследование объекта</div>
+            <div class="scheme__text">Мы отправляем главного инженера на объект для выяснения подробностей</div>
+          </div>
+        </div>
+        <div class="col col_lg_4">
+          <div style="animation-delay: 1.5s" class="scheme__item scheme__item_step_4 start-animate">
+            <div class="scheme__title">Предоставление документов</div>
+            <div class="scheme__text">Вы предоставляете нам все необходимые документы</div>
+          </div>
+        </div>
+        <div class="col col_lg_3">
+          <div style="animation-delay: 2.5s" class="scheme__item scheme__item_step_6 start-animate">
+            <div class="scheme__title">Получение лицевого счета</div>
+            <div class="scheme__text">Гарантируем, что вы получите лицевой счет на водоснабжение и канализацию</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scheme scheme_mod_1">
+      <div class="row">
+        <div class="col col_sm_6">
+          <div class="scheme__item scheme__item_step_1">
+            <div class="scheme__title">Заявка</div>
+            <div class="scheme__text">Вы оставляете заявку или звоните нам по телефону</div>
+            <div class="btn btn_style_small order">Оставить заявку</div>
+          </div>
+        </div>
+        <div class="col col_sm_6">
+          <div class="scheme__item scheme__item_step_2">
+            <div class="scheme__title">Бесплатное обследование объекта</div>
+            <div class="scheme__text">Мы отправляем главного инженера на объект для выяснения подробностей</div>
+          </div>
+        </div>
+        <div class="col col_sm_6">
+          <div class="scheme__item scheme__item_step_3">
+            <div class="scheme__title">Заключение подрядного договора</div>
+            <div class="scheme__text">Мы формируем коммерческое предложение и составляем договор подряда</div>
+          </div>
+        </div>
+        <div class="col col_sm_6">
+          <div class="scheme__item scheme__item_step_4">
+            <div class="scheme__title">Предоставление документов</div>
+            <div class="scheme__text">Вы предоставляете нам все необходимые документы</div>
+          </div>
+        </div>
+        <div class="col col_sm_6">
+          <div class="scheme__item scheme__item_step_5">
+            <div class="scheme__title">Осуществление работ</div>
+            <div class="scheme__text">Проводим необходимые работы по проектированию и монтажу</div>
+          </div>
+        </div>
+        <div class="col col_sm_6">
+          <div class="scheme__item scheme__item_step_6">
+            <div class="scheme__title">Получение лицевого счета</div>
+            <div class="scheme__text">Гарантируем, что вы получите лицевой счет на водоснабжение и канализацию</div>
           </div>
         </div>
       </div>

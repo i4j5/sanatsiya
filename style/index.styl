@@ -251,20 +251,21 @@
     @media (min-width 900px)
         background #fff url('../img/textt-bg.jpg') no-repeat center right
     min-height 300px
-    margin-top 100px
     &__text
         max-width 700px
         p
             margin-bottom 15px
             position relative
-            padding-left 10px
+            padding-left 40px
             &:before
-                content '-'
+                content ''
+                background url('../img/textt-like.png') no-repeat center
+                background-size 20px
                 display block
-                width 10px
-                height 10px
+                width 25px
+                height 25px
                 position absolute
-                left -5px
+                left -0px
                  
     &__title
         padding-top 50px
@@ -416,42 +417,168 @@
 .finish-animate
     opacity 1
 
-.scheme 
-    font-weight 300
-    color #000
-    background #f8f8f8
-    padding 20px 0 30px 0
-    margin-top 50px
+.scheme
+    margin 60px 0
+    display none
+    &__btn
+        height auto
+        font-size 12px
+        padding 10px 20px
+        line-height 1em
+        
+    @media (min-width 1200px)
+        display block
     &__item
-        min-height 210px
-        background #fff
-        padding 30px 25px
+        // transition all 5s linear
+        border-radius 10px 
+        border 3px solid #d3dfe0
+        padding 20px 30px
+        display table
         position relative
-        margin-bottom 20px
+        min-height 160px
+        &::after
+            content " "
+            position absolute
+            display block
+            width 30px
+            height 30px
+            border-right 3px solid #d3dfe0
+            border-bottom 3px solid #d3dfe0
+            transform rotate(45deg)
+            bottom -17px
+            left calc(50% - 15px)
+            background #fff
+        &::before
+            font-size 16px
+            line-height 40px
+            width 40px
+            height 40px
+            background linear-gradient( 0deg, rgb(66,115,214) 0%, rgb(71,125,233) 100%)
+            border-radius 100%
+            border 6px solid #fff
+            content " "
+            position absolute
+            bottom -70px
+            left calc(50% - 20px)
+            text-align center
+            line-height 28px
+            color #fff
+            font-weight 500
+
+        &_step
+            &_1
+                max-width 225px
+                &::before
+                    content "1"
+            &_2
+                max-width 320px
+                margin auto
+                &::before
+                    content "2"
+            &_3
+                max-width 320px
+                margin auto
+                &::before
+                    content "3"
+            &_4
+                margin auto
+                max-width 290px
+                &::before
+                    content "4"
+            &_5
+                max-width 245px
+                &::before
+                    content "5"
+            &_6
+                max-width 260px
+                float right
+                &::before
+                    content "6"
+            &_2
+            &_4
+            &_6
+                padding-top 25px
+                min-height 140px
+                &::after
+                    bottom 0
+                    top -17px
+                    transform rotate(-135deg)
+                &::before
+                    bottom 0px
+                    top -70px
+    &_mod_1
+        
+        .scheme__title
+            padding 6px 12px
+        display block  
+        @media (min-width 1200px)
+            display none
+        & .scheme__item_step
+            &_1
+            &_2
+            &_3
+            &_4
+            &_5
+            &_6
+                float none !important
+                width 100%
+                max-width none
+                padding 10px
+                padding-top 20px
+                padding-bottom 20px
+                min-height 150px
+                margin-bottom 20px 
+                &::after
+                    display none !important
+                &::before
+                    // border 0px
+                    // width 28px
+                    // height 28px
+                    top -18px
+                    right 0
+                    left calc(100% - 28px) !important
+                    bottom calc(100%) !important
+            &_1
+                &::before
+                    content "1"
+            &_2
+                &::before
+                    content "2"
+            &_3
+                &::before
+                    content "3"
+            &_4
+                &::before
+                    content "4"
+            &_5
+                &::before
+                    content "5"
+            &_6
+                &::before
+                    content "6"
     &__title
-        font-size 20px 
-        line-height 1.3em
-        margin-bottom 20px
-        text-transform uppercase
-        z-index 100
-        position relative 
+        font-size 13px 
+        color #fff
+        line-height 1em
+        background rgb(66,115,214) linear-gradient( 0deg, rgb(66,115,214) 0%, rgb(71,125,233) 100%);
+        padding 4px 8px 
+        display inline-block
+        border-radius 40px
+        margin-bottom 10px
+        font-weight 300
     &__text
-        font-size 14px
+        font-size 12px
         line-height 1.4em
         color #454545
-        //margin-bottom 20px
-        z-index 100 
-        position relative
-    &__n
-        font-size 180px
-        font-weight 400
-        color #e8e8e8
-        position absolute
-        z-index 50
-        top 0px
-        right 0px
-        line-height 1
-        font-style italic
+        margin-bottom 10px
+        font-weight 300
+    // &__number
+    &__progress-bar
+        background linear-gradient( 90deg, rgba(210,223,224,0.25098) 0%, rgba(71,123,231,0.25) 0%, rgb(72,124,233) 100%);
+        height 16px
+        width 100%
+        border-radius 20px
+        margin 40px 0
         
         
 .questions
@@ -694,13 +821,29 @@
     margin-bottom 80px
     
 .info
+    &__flex
+        display flex
+        justify-content center
+        flex-direction column
+    &__arrow
+        display block
+        margin auto
+        @media (max-width 991px)
+            transform rotate(90deg)
+    &__box
+        height 100%
+        border 2px solid #e2e2e2
+        box-shadow 0 2px 30px 0 rgba(207,207,207,.6)
+        border-radius 5px
+        padding 20px
     font-weight 300
-    max-width 750px
+    // max-width 750px
     margin 100px auto 70px auto
-    background url('../img/info-bg.png') no-repeat bottom center
-    background-size contain
-    padding 0 20px 30px 20px
+    // background url('../img/info-bg.png') no-repeat bottom center
+    // background-size contain
+    // padding 0 20px 30px 20px
     position relative
+    width 100%
     &__title
         font-size 20px 
         line-height 1.4em
@@ -730,3 +873,32 @@
         position absolute
         left -50px
         top -8px
+        
+.formm
+    padding 40px 0
+    background #ddd
+    &__title
+        font-size 24px
+        text-transform: uppercase
+        margin-bottom 10px
+        //text-align center
+    .input
+        width 250px
+        margin 10px 10px 10px 0
+    // .form
+    //     display table
+    //     margin auto 
+        
+    .form__btn
+        margin-left 10px
+        
+
+
+.ttext
+    width 100%
+    background radial-gradient(circle,#52495d 61%,#5d516c 83%) #52495d
+    padding 40px
+    margin-bottom 60px
+    color #fff
+    font-size 18px
+    font-weight 300

@@ -81,24 +81,66 @@ body.page
           |Санация и ремонт трубопровода любой сложности
         #offer.offer__action.start-animate(style="animation-delay: .2s") Получить расчет стоимости Вашего объекта
 
+  +b.formm
+    .container
+      +e.title Записаться на бесплатный выезд инженера-проектировщика
+      +b.form
+        form.ajax
+          input(placeholder='Введите Ваше имя' name='name').input.input_type_name
+          input(placeholder='Введите Ваш телефон' name='phone').input.input_type_phone
+          input(placeholder='Введите Ваш E-mail' name='email').input.input_type_email
+          input(type='hidden', name='url', value="<?echo $url?>")
+          input(type='hidden', name='utm', value="<?echo $utm?>")
+          input(type='hidden', name='utm_term', value="<?echo $utm_term?>")
+          input(type='hidden', name='utm_campaign', value="<?echo $utm_campaign?>")
+          input(type='hidden', name='utm_source', value="<?echo $utm_source?>")
+          input(type='hidden', name='utm_medium', value="<?echo $utm_medium?>")
+          input(type='hidden', name='utm_content', value="<?echo $utm_content?>")
+          input(type='hidden', name='order', value='Санация трубопровода. Выезд инженера')
+          input(type='submit' value='Отправить').form__btn
 
   .container
     .triggers
       .row
-        +b.col._lg_2._md_2._sm_6._xs_12
+        +b.col._lg_3._md_3._sm_6._xs_12
           .triggers__items
           img(src='img/triggers__img1.png').triggers__img
           .triggers__text Опыт работы<br>более 6 лет
-        +b.col._lg_2._md_2._sm_6._xs_12
-          .triggers__items
-          img(src='img/triggers__img7.png').triggers__img
-          .triggers__text Имеем право участия<br> в конкурсах, СРО
         +b.col._lg_3._md_3._sm_6._xs_12
           .triggers__items
-          img(src='img/triggers__img2.png').triggers__img
-          .triggers__text Бесплатные<br>консультации 
-        +b.col._lg_4._lg-offset_1._md_4._sm_12._xs_12
-          .about ООО «БК Инвент» — общество профессионалов, использующих в своей практике инновационный подход к решению как проектных, так и инженерно-строительных задач.
+          img(src='img/triggers__img6.png').triggers__img
+          .triggers__text Цены ниже<br>среднерыночных<br>на 7-12%
+        +b.col._lg_3._md_3._sm_6._xs_12
+          .triggers__items
+          img(src='img/triggers__img5.png').triggers__img
+          .triggers__text Применяем<br>сертифицированные<br>материалы
+        +b.col._lg_3._md_3._sm_6._xs_12
+          .triggers__items
+          img(src='img/triggers__img10.png').triggers__img
+          .triggers__text Cанация диаметром<br>от 25мм до 900 мм
+        +b.col._lg_3._md_3._sm_6._xs_12
+          .triggers__items
+          img(src='img/triggers__img12.png').triggers__img
+          .triggers__text Без выхода на поверхность<br>до 300 м
+        +b.col._lg_3._md_3._sm_6._xs_12
+          .triggers__items
+          img(src='img/triggers__img3.png').triggers__img
+          .triggers__text Возможность прокола<br>из колодца в колодец
+        +b.col._lg_3._md_3._sm_6._xs_12
+          .triggers__items
+          img(src='img/triggers__img11.png').triggers__img
+          .triggers__text Используем технику <br>с разными возможностями
+        +b.col._lg_3._md_3._sm_6._xs_12
+          .triggers__items
+          img(src='img/triggers__img4.png').triggers__img
+          .triggers__text Предоставляем всю документацию, согласно НОССТРОЙ
+
+  +b.ttext
+    .container
+      |Санация трубопровода - это бестраншейный метод ремонта трубопровода разного диаметра. Существуют два основных способа санации трубопровода : релайнинг (“труба в трубе”), этот принцип применим в тех случаях, когда вводимая труба ниже диаметром, чем ремонтируемая, и способна пройти внутри нее. И второй способ - реновация - она подразумевает разрушение старой трубы режущими приборами и очищение траншеи, по которой проходит новая заменяемая труба
+
+
+
 
   +b.textt
     .container
@@ -157,19 +199,26 @@ body.page
                 input(type='hidden', name='order', value='Санация трубопровода. Выезд инженера')
                 input(type='submit' value='Отправить').form__btn
 
-  
   +b.info
-    +e.icon
-    +e.title Подготовительный этап
-    +e.text
-      p Остановка системы (стока вод) по ремонтируемой ветке
-      p Диагностика трубы методом телеинспектирования, которая позволяет оценить и выявить ее состояние
-      p Промывка трубы, очистка от мусора и налета
-    +e.title Основной этап
-    +e.text
-      p Подготовка приямка
-      p Установка оборудования
-      p Проведение санации трубопровода
+    .container
+      .row
+        +b.col._lg_5._md_5._sm_12._xs_12
+          .info__box
+            .info__title Подготовительный этап
+            .info__text
+              p Остановка системы (стока вод) по ремонтируемой ветке
+              p Диагностика трубы методом телеинспектирования, которая позволяет оценить и выявить ее состояние
+              p Промывка трубы, очистка от мусора и налета
+
+        +b.col._lg_2._md_2._sm_12._xs_12.info__flex
+          img(src="img/info__arrow.png").info__arrow
+        +b.col._lg_5._md_5._sm_12._xs_12
+          .info__box
+            .info__title Основной этап
+            .info__text
+              p Подготовка приямка
+              p Установка оборудования
+              p Проведение санации трубопровода
 
 
 
@@ -196,52 +245,69 @@ body.page
             +e.icon
 
  
-  //- .scheme
-  //-   .container
-  //-     .title Как мы работаем
-  //-     .row
-  //-       +b.col._lg_3._md_3._sm_6._xs_12
-  //-         .scheme__item
-  //-           .scheme__n 1
-  //-           .scheme__title Заявка<br>
-  //-           .scheme__text Вы нам звоните, заполняете форму обратной связи или пишите на e-mail
-  //-       +b.col._lg_3._md_3._sm_6._xs_12
-  //-         .scheme__item
-  //-           .scheme__n 2
-  //-           .scheme__titleОбследование<br>объекта
-  //-           .scheme__text На объект выезжает наш инженер для подробного обследования и уточнения всех необходимых нюансов.
-  //-       +b.col._lg_3._md_3._sm_6._xs_12
-  //-         .scheme__item
-  //-           .scheme__n 3
-  //-           .scheme__title Коммерческое<br>предложение
+  .container
+    +b.title
+      +e.wrap
+        +e.text Cхема работы
+    .scheme#scheme
+      .row
+        +b.col.col_lg_3
+          .scheme__item.scheme__item_step_1.start-animate
+            .scheme__title Заявка
+            .scheme__text Вы оставляете заявку или звоните нам по телефону
+            .scheme__btn.btn.order Оставить заявку
+        +b.col._lg_5
+          .scheme__item.scheme__item_step_3(style="animation-delay: 1s").start-animate
+            .scheme__title Заключение подрядного договора
+            .scheme__text Мы формируем коммерческое предложение и составляем договор подряда
 
-  //-           .scheme__text Мы формируем коммерческое предложение на основании заполненной справки и отправляем вам на согласование
-  //-       +b.col._lg_3._md_3._sm_6._xs_12
-  //-         .scheme__item
-  //-           .scheme__n 4
-  //-           .scheme__title Контракт
-  //-           .scheme__text Предоставляем вам полный пакет документов и заключаем контракт
-  //-       +b.col._lg_3._md_3._sm_6._xs_12
-  //-         .scheme__item
-  //-           .scheme__n 5
-  //-           .scheme__title Изготовление<br>паспорта
-  //-           .scheme__text Занимает 5 рабочих дней с момента предоставления информационной справки
-  //-       +b.col._lg_3._md_3._sm_6._xs_12
-  //-         .scheme__item
-  //-           .scheme__n 6
-  //-           .scheme__title Выдача<br>паспорта
+        +b.col._lg_3
+          .scheme__item.scheme__item_step_5(style="animation-delay: 2s").start-animate
+            .scheme__title Осуществление работ
+            .scheme__text Проводим необходимые работы по проектированию и монтажу
+      .scheme__progress-bar
+      .row
+        +b.col._lg_5
+          .scheme__item.scheme__item_step_2(style="animation-delay: .5s").start-animate
+            .scheme__title Бесплатное обследование объекта
+            .scheme__text Мы отправляем главного инженера на объект для выяснения подробностей
+        +b.col._lg_4
+          .scheme__item.scheme__item_step_4(style="animation-delay: 1.5s").start-animate
+            .scheme__title Предоставление документов
+            .scheme__text Вы предоставляете нам все необходимые документы
+        +b.col._lg_3
+          .scheme__item.scheme__item_step_6(style="animation-delay: 2.5s").start-animate
+            .scheme__title Получение лицевого счета
+            .scheme__text Гарантируем, что вы получите лицевой счет на водоснабжение и канализацию
 
-  //-           .scheme__text Происходит на основании подписанных актов выполненных работ и обмена подписанных документов
-  //-       +b.col._lg_3._md_3._sm_6._xs_12
-  //-         .scheme__item
-  //-           .scheme__n 7
-  //-           .scheme__title Оплата<br>по договору
-  //-           .scheme__textИ И только после того, как вы получили паспорт на руки, вы оплачиваете выставленный счет
-  //-       +b.col._lg_3._md_3._sm_6._xs_12
-  //-         .scheme__item
-  //-           .scheme__n 8
-  //-           .scheme__title Гарантия
-  //-           .scheme__text Мы даем гарантию, что Водоканал примет паспорт. Вы даете нам обратную связь, когда это произошло!
+    .scheme.scheme_mod_1
+      .row
+        +b.col._sm_6
+          .scheme__item.scheme__item_step_1
+            .scheme__title Заявка
+            .scheme__text Вы оставляете заявку или звоните нам по телефону
+            .btn.btn_style_small.order Оставить заявку
+        +b.col._sm_6
+          .scheme__item.scheme__item_step_2
+            .scheme__title Бесплатное обследование объекта
+            .scheme__text Мы отправляем главного инженера на объект для выяснения подробностей
+        +b.col._sm_6
+          .scheme__item.scheme__item_step_3
+            .scheme__title Заключение подрядного договора
+            .scheme__text Мы формируем коммерческое предложение и составляем договор подряда
+        +b.col._sm_6
+          .scheme__item.scheme__item_step_4
+            .scheme__title Предоставление документов
+            .scheme__text Вы предоставляете нам все необходимые документы
+
+        +b.col._sm_6
+          .scheme__item.scheme__item_step_5
+            .scheme__title Осуществление работ
+            .scheme__text Проводим необходимые работы по проектированию и монтажу
+        +b.col._sm_6
+          .scheme__item.scheme__item_step_6
+            .scheme__title Получение лицевого счета
+            .scheme__text Гарантируем, что вы получите лицевой счет на водоснабжение и канализацию
 
   .questions
     .questions__title Остались вопросы?
@@ -333,3 +399,11 @@ body.page
   noscript
     div
       img(src='https://mc.yandex.ru/watch/51690836', style='position:absolute; left:-9999px;', alt='')
+
+  script.
+    (function(w, d, s, h, id) {    w.roistatProjectId = id; w.roistatHost = h;    var p = d.location.protocol == "https:" ? "https://" : "http://";    var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";    var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);})(window, document, 'script', 'cloud.roistat.com', 'd146057ffd124300f00ff5e37179672c');
+  script(type='text/javascript').
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(53737453, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true });
+  noscript
+    div
+      img(src='https://mc.yandex.ru/watch/53737453', style='position:absolute; left:-9999px;', alt='')
